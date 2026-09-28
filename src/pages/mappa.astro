@@ -5,6 +5,7 @@ import MappaLuoghi from '../components/MappaLuoghi.astro';
 import FilterBar from '../components/FilterBar.astro';
 import LuogoCard from '../components/LuogoCard.astro';
 import { slugify } from '../utils/slug';
+import { SITE } from '../config/site';
 
 const tuttiLuoghi = await getCollection('luoghi');
 
@@ -37,15 +38,14 @@ const luoghiPerMappa = luoghi.map((l) => ({
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Mappa dei Capanni Fotografici',
-  description:
-    'Mappa dei capanni fotografici, osservatori per il birdwatching e oasi naturalistiche in Italia.',
+  name: SITE.name,
+  description: SITE.tagline,
   url: Astro.site,
 };
 ---
 
 <Base
-  title="Mappa dei Capanni Fotografici e delle Oasi Naturalistiche in Italia"
+  title={`Mappa | ${SITE.name}`}
   description="Trova capanni fotografici a pagamento, osservatori per il birdwatching e oasi naturalistiche in Italia, filtrabili per regione, specie e periodo. Ogni scheda è verificata sulle fonti ufficiali."
   jsonLd={jsonLd}
 >
@@ -60,6 +60,7 @@ const jsonLd = {
   <FilterBar regioni={regioni} specie={specieUniche} />
   <MappaLuoghi luoghi={luoghiPerMappa} />
 
+  <h2 class="visually-hidden">Elenco dei luoghi</h2>
   <div class="card-grid">
     {luoghi.map((l) => (
       <LuogoCard

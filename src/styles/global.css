@@ -596,6 +596,15 @@ img {
    livello dei tile (non ai marker/popup, che restano leggibili). I tile
    restano quelli standard forniti da OpenStreetMap: nessuna modifica ai
    dati o alla loro attribuzione, solo un adattamento visivo lato client. */
+/* Bersagli touch Leaflet portati a 44px (default 30px, sotto la soglia
+   consigliata) */
+#map .leaflet-control-zoom-in,
+#map .leaflet-control-zoom-out {
+  width: 44px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+}
+
 :root[data-theme="dark"] #map .leaflet-tile-pane {
   filter: brightness(0.72) invert(1) contrast(0.9) hue-rotate(180deg)
     saturate(0.6);

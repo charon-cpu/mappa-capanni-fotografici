@@ -40,19 +40,26 @@ const { luoghi } = Astro.props;
     shadowSize: [41, 41],
   });
 
-  const coloriTipo: Record<string, string> = {
-    capanno_fotografico: '#c96f34',
-    osservatorio_birdwatching: '#2f5233',
-    oasi_riserva: '#6b7d6b',
+  // Un solo colore d'accento (coerente col resto del sito): le tipologie si
+  // distinguono per intensità dello stesso colore, non per tinte diverse.
+  const sfondoTipo: Record<string, string> = {
+    capanno_fotografico: 'var(--color-accent)',
+    osservatorio_birdwatching:
+      'color-mix(in srgb, var(--color-accent) 55%, var(--color-text) 45%)',
+    oasi_riserva: 'var(--color-text-muted)',
   };
 
-  function coloredIcon(colore: string) {
+  function coloredIcon(tipo: string) {
+    const colore = sfondoTipo[tipo] ?? 'var(--color-text-muted)';
+    // L'area cliccabile (24x24, soglia minima per i bersagli touch) è più
+    // grande del pallino visibile (16x16): centrato con flex, non cambia
+    // l'aspetto della mappa ma allarga la zona toccabile.
     return L.divIcon({
       className: 'marker-dot',
-      html: `<span style="display:block;width:16px;height:16px;border-radius:50%;background:${colore};border:2px solid white;box-shadow:0 0 0 1px rgba(0,0,0,0.25);"></span>`,
-      iconSize: [16, 16],
-      iconAnchor: [8, 8],
-      popupAnchor: [0, -8],
+      html: `<span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;"><span style="display:block;width:16px;height:16px;border-radius:50%;background:${colore};border:2px solid var(--color-bg);box-shadow:0 0 0 1px rgba(0,0,0,0.25);"></span></span>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12],
     });
   }
 
@@ -71,12 +78,16 @@ const { luoghi } = Astro.props;
 
   for (const luogo of luoghi) {
     const marker = L.marker([luogo.lat, luogo.lon], {
-      icon: coloredIcon(coloriTipo[luogo.tipo] ?? '#555'),
+      icon: coloredIcon(luogo.tipo),
+      alt: luogo.nome,
     })
       .addTo(map)
       .bindPopup(
         `<strong><a href="${luogo.url}">${luogo.nome}</a></strong><br>${luogo.comune}`
       );
+    // Leaflet rende i marker con bindPopup interattivi (role="button",
+    // tabindex) ma senza nome accessibile: lo aggiungiamo a mano.
+    marker.getElement()?.setAttribute('aria-label', `${luogo.nome}, ${luogo.comune}`);
     markers.push({ luogo, marker });
   }
 

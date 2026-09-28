@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { slugify } from '../../utils/slug';
+import { SITE } from '../../config/site';
 
 export async function getStaticPaths() {
   const luoghi = await getCollection('luoghi');
@@ -50,12 +51,12 @@ const jsonLd = {
   url: luogo.contatti.sito_ufficiale,
 };
 
-const title = `${luogo.nome} — ${luogo.comune} (${luogo.provincia}) | Mappa dei Capanni Fotografici`;
+const title = `${luogo.nome} — ${luogo.comune} (${luogo.provincia}) | ${SITE.name}`;
 const description = luogo.descrizione.slice(0, 155).trim();
 ---
 
 <Base title={title} description={description} jsonLd={jsonLd}>
-  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <p><a href="/mappa">&larr; Torna alla mappa</a></p>
 
   <div class="scheda-header">
     <span class={`badge tipo-${luogo.tipo}`}>{etichetteTipo[luogo.tipo] ?? luogo.tipo}</span>
