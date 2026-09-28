@@ -8,7 +8,7 @@ interface Props {
   comune: string;
   provincia: string;
   regione: string;
-  prenotazione_necessaria: boolean;
+  prenotazione_necessaria: boolean | null;
   url: string;
   immagine?: any;
 }
@@ -29,5 +29,5 @@ const etichetteTipo: Record<string, string> = {
   <span class={`badge tipo-${tipo}`}>{etichetteTipo[tipo] ?? tipo}</span>
   <h3><a href={url}>{nome}</a></h3>
   <p class="meta">{comune} ({provincia})</p>
-  <p class="meta">{prenotazione_necessaria ? 'Prenotazione necessaria' : 'Accesso libero'}</p>
+  <p class="meta">{prenotazione_necessaria === null ? 'Prenotazione: da verificare' : prenotazione_necessaria ? 'Prenotazione necessaria' : 'Accesso libero'}</p>
 </article>

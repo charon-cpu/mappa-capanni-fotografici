@@ -1,0 +1,28 @@
+id: oasi-wwf-saline-di-trapani-e-paceco
+nome: "Oasi WWF Saline di Trapani e Paceco"
+tipo: oasi_riserva
+regione: Sicilia
+provincia: "Trapani"
+comune: "Trapani"
+posizione:
+  precisione: area_approssimata
+  lat: 37.996505
+  lon: 12.5353082
+  nota_precisione: "Posizione del punto d'interesse \"Oasi WWF Saline di Trapani e Paceco, Sicilia, Italia\" trovato su OpenStreetMap (geocodifica automatica): da confermare comunque con l'indirizzo esatto del gestore."
+descrizione: "Scheda pubblicata a partire da una fonte ufficiale (WWF Italia), in attesa di verifica completa: descrizione dettagliata non ancora scritta. Fonte e gestore sono reali e verificati; prezzo, orari, specie e indirizzo esatto restano da confermare."
+specie_principali: []
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: null
+prezzo_indicativo: "da verificare"
+come_arrivare: ", Sicilia. Indirizzo esatto da verificare sulla fonte ufficiale."
+contatti:
+  telefono: "da verificare"
+  email: "da verificare"
+  sito_ufficiale: "https://www.parks.it/wwf/?reg=19"
+gestore: "WWF Italia"
+accessibilità: "da verificare"
+fonte: "https://www.parks.it/wwf/?reg=19"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: "Pubblicata in blocco da bozza (affidabilità originaria: alta). Prezzo/orari/specie/descrizione/indirizzo esatto NON verificati: completare prima di considerarla una scheda di riferimento."

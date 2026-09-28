@@ -20,7 +20,10 @@ const luoghi = defineCollection({
     descrizione: z.string(),
     specie_principali: z.array(z.string()),
     periodo_migliore: z.array(z.string()),
-    prenotazione_necessaria: z.boolean(),
+    // null = non ancora verificato (schede pubblicate in blocco, in attesa
+    // di conferma diretta col gestore): l'interfaccia mostra "da verificare"
+    // invece di affermare necessaria/non necessaria senza saperlo davvero.
+    prenotazione_necessaria: z.boolean().nullable(),
     prezzo_indicativo: z.string(),
     come_arrivare: z.string(),
     contatti: z.object({
