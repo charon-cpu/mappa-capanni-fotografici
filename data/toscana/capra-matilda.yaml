@@ -1,0 +1,31 @@
+id: capra-matilda
+nome: "Capra Matilda"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Grosseto
+comune: Roccalbegna
+posizione:
+  precisione: area_approssimata
+  lat: 42.7859754
+  lon: 11.5076818
+  nota_precisione: "Oasi affiliata WWF coincidente con un'azienda agricola privata: coordinate al livello del comune (Roccalbegna/Semproniano), non è stato trovato un indirizzo puntuale pubblicato."
+descrizione: >
+  Azienda agricola biologica affiliata al WWF alle pendici del Monte Amiata, tra i comuni di Roccalbegna e Semproniano. Alleva animali di razze locali a rischio di estinzione su 62,5 ettari tra campi, prati e boschi. Fa parte del circuito "Fattorie del Panda" e offre ospitalità agrituristica.
+specie_principali: []
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: true
+prezzo_indicativo: "da verificare (azienda agrituristica, non oasi a ingresso singolo)"
+come_arrivare: >
+  Località Podere il Cancellone, Roccalbegna (GR).
+contatti:
+  telefono: "0564 980123"
+  email: "antonio_pastorelli@virgilio.it"
+  sito_ufficiale: "https://www.agriturismocapramatilda.it"
+gestore: "Azienda Agricola Pastorelli (Oasi Affiliata WWF)"
+accessibilità: "da verificare"
+fonte: "https://www.parks.it/oasi.capra.matilda/contatti.php"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Nessuna foto con licenza chiara trovata su Wikimedia Commons per questo luogo specifico (azienda privata poco fotografata pubblicamente): resta segnaposto.

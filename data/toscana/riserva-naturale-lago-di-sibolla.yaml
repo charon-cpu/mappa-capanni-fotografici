@@ -1,0 +1,42 @@
+id: riserva-naturale-lago-di-sibolla
+nome: "Riserva naturale Lago di Sibolla"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Lucca
+comune: Altopascio
+posizione:
+  precisione: area_approssimata
+  lat: 43.8240648
+  lon: 10.6941163
+  nota_precisione: "Coordinata sulla via di accesso (zona industriale Altopascio): l'indirizzo esatto della riserva non è geocodificabile con precisione."
+descrizione: >
+  Riserva LIPU di 64 ettari su un piccolo lago costiero relitto, sito Ramsar dal 1996. 147 specie di uccelli documentate, con una garzaia che ospita 11 specie e oltre 1.200 coppie riproduttive; presenti anche spatole, nitticore, tarabusini, falchi di palude, martin pescatore e la testuggine palustre europea.
+specie_principali:
+  - Nitticora
+  - Tarabusino
+  - "Falco di palude"
+  - "Martin pescatore"
+  - "Testuggine palustre europea"
+periodo_migliore:
+  - "primavera-estate (garzaia attiva)"
+prenotazione_necessaria: true
+prezzo_indicativo: "da verificare"
+come_arrivare: >
+  Via dei Sandroni 15, 55011 Altopascio (LU), 2 km dal casello A11 di Altopascio.
+contatti:
+  telefono: "328 9291177"
+  email: "riserva.sibolla@lipu.it"
+  sito_ufficiale: "https://www.lipu.it/oasi-riserve/riserva-naturale-lago-sibolla"
+gestore: LIPU
+accessibilità: "da verificare"
+immagine:
+  file: ./foto/riserva-naturale-lago-di-sibolla.jpg
+  alt: "Il Lago di Sibolla"
+  autore: "Carnby (Wikimedia Commons)"
+  licenza: "CC BY 3.0"
+  data_scatto: 2009-03-15
+  scattata_sul_posto: true
+fonte: "https://www.lipu.it/oasi-riserve/riserva-naturale-lago-sibolla"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

@@ -1,0 +1,44 @@
+id: riserva-naturale-santa-luce
+nome: "Riserva naturale Santa Luce"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Pisa
+comune: "Santa Luce"
+posizione:
+  precisione: area_approssimata
+  lat: 43.4665473
+  lon: 10.5467537
+  nota_precisione: "Coordinata al livello del comune: indirizzo puntuale (Via Rosignanina 67) non geocodificabile con precisione."
+descrizione: >
+  Riserva LIPU sul lago artificiale di Santa Luce, con oltre 180 specie di uccelli documentate. Lo svasso maggiore è il simbolo della riserva; tra gli svernanti moriglione, alzavola, germano reale e cormorano; tra i nidificanti estivi cannareccione, cannaiola e gruccione. Rapaci presenti tutto l'anno: gheppio, poiana, falco di palude, barbagianni e civetta.
+specie_principali:
+  - "Svasso maggiore"
+  - Moriglione
+  - Alzavola
+  - Gruccione
+  - "Falco di palude"
+  - Barbagianni
+  - Cannareccione
+periodo_migliore:
+  - "primavera (corteggiamento svasso maggiore)"
+prenotazione_necessaria: false
+prezzo_indicativo: "5 € intero (dato da riconfermare)"
+come_arrivare: >
+  Via Rosignanina 67, 56040 Santa Luce (PI). Da Pisa: SS206 verso Cecina, poi SP51 Rosignanina per 2 km.
+contatti:
+  telefono: "344 0858799"
+  email: "riserva.santaluce@lipu.it"
+  sito_ufficiale: "https://www.lipu.it/oasi-riserve/riserva-naturale-santa-luce"
+gestore: LIPU
+accessibilità: "percorso semplice, scarpe da trekking consigliate"
+immagine:
+  file: ./foto/riserva-naturale-santa-luce.jpg
+  alt: "Il lago di Santa Luce"
+  autore: "Brax14 (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2019-06-28
+  scattata_sul_posto: true
+fonte: "https://www.lipu.it/oasi-riserve/riserva-naturale-santa-luce"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

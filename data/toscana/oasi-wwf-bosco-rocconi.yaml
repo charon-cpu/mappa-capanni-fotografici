@@ -1,0 +1,43 @@
+id: oasi-wwf-bosco-rocconi
+nome: "Oasi WWF Bosco Rocconi"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Grosseto
+comune: Roccalbegna
+posizione:
+  precisione: area_approssimata
+  lat: 42.7859754
+  lon: 11.5076818
+  nota_precisione: "Coordinata al livello del comune di Roccalbegna: la riserva si estende anche nel comune di Semproniano, indirizzo puntuale non pubblicato."
+descrizione: >
+  Riserva naturale di oltre 370 ettari lungo la valle del fiume Albegna, tra i comuni di Roccalbegna e Semproniano, con pareti rocciose verticali, un canyon scavato dai fiumi Albegna e Rigo, e boschi ricchi di circa 30 specie di orchidee selvatiche. Il falco pellegrino è il simbolo dell'oasi; frequenti anche il biancone, il merlo acquaiolo e il picchio muraiolo sulle pareti rocciose.
+specie_principali:
+  - "Falco pellegrino"
+  - Biancone
+  - "Merlo acquaiolo"
+  - "Picchio muraiolo"
+  - Martora
+  - "Gatto selvatico"
+periodo_migliore:
+  - "primavera-estate (fioriture e farfalle)"
+prenotazione_necessaria: true
+prezzo_indicativo: "10 € intero, 6 € soci WWF"
+come_arrivare: >
+  Comune di Roccalbegna (GR), valle del fiume Albegna.
+contatti:
+  telefono: "320 8223972"
+  email: "boscorocconi@wwf.it"
+  sito_ufficiale: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/bosco-rocconi/"
+gestore: "WWF Italia"
+accessibilità: "visite sempre guidate, cambio di quota fino a 400m"
+immagine:
+  file: ./foto/oasi-wwf-bosco-rocconi.jpg
+  alt: "Il bosco e le pareti rocciose della Riserva Bosco dei Rocconi"
+  autore: "Vinattieri Matteo (Wikimedia Commons)"
+  licenza: "Pubblico dominio"
+  data_scatto: 2006-08-01
+  scattata_sul_posto: true
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/bosco-rocconi/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

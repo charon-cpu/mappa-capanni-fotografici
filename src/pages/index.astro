@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import StepsComeFunziona from '../components/StepsComeFunziona.astro';
 import AnteprimaItalia from '../components/AnteprimaItalia.astro';
 import { SITE } from '../config/site';
+import { slugify } from '../utils/slug';
 
 const tuttiLuoghi = await getCollection('luoghi');
 const numeroLuoghi = tuttiLuoghi.length;
@@ -44,6 +45,14 @@ const tutteLeRegioni = [
   'Sardegna',
 ];
 
+function elencoItaliano(voci: string[]): string {
+  if (voci.length === 0) return '';
+  if (voci.length === 1) return voci[0];
+  return `${voci.slice(0, -1).join(', ')} e ${voci[voci.length - 1]}`;
+}
+const regioniElenco = elencoItaliano(regioniPubblicate);
+const regioneParola = numeroRegioni === 1 ? 'regione' : 'regioni';
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -55,7 +64,7 @@ const jsonLd = {
 
 <Base
   title={`${SITE.name} — capanni fotografici e oasi naturalistiche in Italia`}
-  description={`Mappa gratuita e senza registrazione di capanni fotografici e oasi naturalistiche in Italia, verificata a mano sulle fonti ufficiali. Oggi ${numeroLuoghi} schede in ${numeroRegioni} regione (Veneto), in crescita.`}
+  description={`Mappa gratuita e senza registrazione di capanni fotografici e oasi naturalistiche in Italia, verificata a mano sulle fonti ufficiali. Oggi ${numeroLuoghi} schede in ${numeroRegioni} ${regioneParola} (${regioniElenco}), in crescita.`}
   jsonLd={jsonLd}
 >
   <section class="hero">
@@ -79,12 +88,12 @@ const jsonLd = {
   </section>
 
   <section class="section">
-    <h2>{numeroLuoghi} luoghi verificati, si parte dal Veneto</h2>
+    <h2>{numeroLuoghi} luoghi verificati in {regioniElenco}</h2>
     <p class="section-lead">
       Il sito cresce regione per regione: pubblichiamo solo quello che
       abbiamo controllato di persona sulle fonti ufficiali.
     </p>
-    <AnteprimaItalia numeroLuoghi={numeroLuoghi} />
+    <AnteprimaItalia numeroLuoghi={numeroLuoghi} regioniElenco={regioniElenco} />
   </section>
 
   <section class="section">
@@ -112,14 +121,14 @@ const jsonLd = {
   <section class="section">
     <h2>Regioni disponibili e in arrivo</h2>
     <p class="section-lead">
-      Copriamo oggi solo il Veneto. Le altre regioni sono in lavorazione,
+      Copriamo oggi {regioniElenco}. Le altre regioni sono in lavorazione,
       una alla volta: non ci sono ancora schede pubblicate per loro.
     </p>
     <div class="region-list">
       {tutteLeRegioni.map((regione) => {
         const disponibile = regioniPubblicate.includes(regione);
         return disponibile ? (
-          <a class="region-chip" data-available="true" href={`/regione/veneto`}>{regione}</a>
+          <a class="region-chip" data-available="true" href={`/regione/${slugify(regione)}`}>{regione}</a>
         ) : (
           <span class="region-chip" data-available="false">{regione} · in arrivo</span>
         );

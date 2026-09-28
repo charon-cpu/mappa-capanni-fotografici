@@ -1,0 +1,46 @@
+id: padule-di-bolgheri
+nome: "Oasi WWF Padule di Bolgheri"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Livorno
+comune: "Castagneto Carducci"
+posizione:
+  precisione: area_approssimata
+  lat: 43.159983
+  lon: 10.6002338
+  nota_precisione: "Coordinata sulla strada provinciale indicata come riferimento (SP della zona): l'accesso esatto è privato e su prenotazione, non pubblicato come indirizzo puntuale."
+descrizione: >
+  Rifugio faunistico privato di 513 ettari tra stagni, prati allagati e pineta, con sei osservatori faunistici lungo i sentieri tracciati. Le cicogne sono tornate a nidificare qui dal 2008, dopo 200 anni di assenza. Tra gli svernanti germano reale, fischione, mestolone, codone, canapiglia e alzavola; in primavera pittima reale, combattente, pettegola e pantana.
+specie_principali:
+  - "Cicogna bianca"
+  - Fischione
+  - Mestolone
+  - Codone
+  - "Pittima reale"
+  - Combattente
+  - Tuffetto
+  - Avocetta
+periodo_migliore:
+  - novembre-aprile
+prenotazione_necessaria: true
+prezzo_indicativo: "da verificare"
+come_arrivare: >
+  SP 39, km 269,4 - 57022 Castagneto Carducci (LI).
+contatti:
+  telefono: "328 1937095 / 389 9578763"
+  email: "paduledibolgheri@sassicaia.com"
+  sito_ufficiale: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/padule-di-bolgheri/"
+gestore: "WWF Italia (Oasi Affiliata, proprietà privata)"
+accessibilità: "da verificare"
+immagine:
+  file: ./foto/padule-di-bolgheri.jpg
+  alt: "Vista panoramica della zona nord del Padule di Bolgheri"
+  autore: "Stefano Benucci (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2019-12-24
+  scattata_sul_posto: true
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/padule-di-bolgheri/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: >
+  Prezzo di ingresso non trovato in nessuna fonte consultata: da chiedere direttamente al gestore.

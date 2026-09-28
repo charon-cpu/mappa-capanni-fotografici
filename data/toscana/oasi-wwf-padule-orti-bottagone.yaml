@@ -1,0 +1,47 @@
+id: oasi-wwf-padule-orti-bottagone
+nome: "Oasi WWF Padule Orti-Bottagone"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Livorno
+comune: Piombino
+posizione:
+  precisione: esatta
+  lat: 42.9542378
+  lon: 10.5999014
+  nota_precisione: ""
+descrizione: >
+  Zona umida costiera alle porte di Piombino, tra le poche paludi salmastre superstiti della costa toscana. Conta 231 specie di uccelli osservate: tra gli svernanti germano reale, codone e airone cenerino; tra i nidificanti spatola, airone rosso e falco pescatore. Sono previsti accessi dedicati per fotografi e birdwatcher in orari e giorni specifici, sempre su prenotazione.
+specie_principali:
+  - "Germano reale"
+  - Codone
+  - "Airone cenerino"
+  - "Falco di palude"
+  - "Falco pellegrino"
+  - Spatola
+  - "Airone rosso"
+  - "Falco pescatore"
+periodo_migliore:
+  - "inverno (svernanti)"
+  - "primavera (migratori)"
+prenotazione_necessaria: true
+prezzo_indicativo: "10 € intero, 8 € ridotto (verificare aggiornamento)"
+come_arrivare: >
+  Strada Prov. 40 Geodetica, km 6,700 - Località Torre del Sale, Piombino (LI).
+contatti:
+  telefono: "389 9578763"
+  email: "ortibottagone@wwf.it"
+  sito_ufficiale: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/bottagone/"
+gestore: "WWF Italia"
+accessibilità: "non specificata, da verificare"
+immagine:
+  file: ./foto/oasi-wwf-padule-orti-bottagone.jpg
+  alt: "Vista della palude costiera dell'Oasi Orti-Bottagone"
+  autore: "Giggi95 (Wikimedia Commons)"
+  licenza: "CC BY-SA 3.0"
+  data_scatto: 2010-08-25
+  scattata_sul_posto: true
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/bottagone/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: >
+  Prezzo trovato su fonte secondaria (ricerca aggregata), non sulla pagina ufficiale WWF: da riconfermare.

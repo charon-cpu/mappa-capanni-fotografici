@@ -1,0 +1,44 @@
+id: riserva-naturale-del-chiarone-oasi-massaciuccoli
+nome: "Riserva naturale del Chiarone (Oasi Massaciuccoli)"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Lucca
+comune: Massarosa
+posizione:
+  precisione: esatta
+  lat: 43.865594
+  lon: 10.3386981
+  nota_precisione: ""
+descrizione: >
+  Riserva LIPU di 47 ettari sulla sponda orientale del Lago di Massaciuccoli, famosa per il birdwatching fin dall'Ottocento. Circa 300 specie di uccelli documentate: aironi (cenerino, bianco maggiore, guardabuoi), avocette, chiurli, piro piro, falchi di palude, falchi pescatori e diverse sterne. Una passerella in legno di 800 metri conduce a 4 punti di osservazione, accessibile anche a persone con disabilità.
+specie_principali:
+  - "Airone cenerino"
+  - "Airone bianco maggiore"
+  - Avocetta
+  - Chiurlo
+  - "Falco di palude"
+  - "Falco pescatore"
+  - Tarabuso
+periodo_migliore:
+  - "marzo-aprile (migrazione)"
+prenotazione_necessaria: false
+prezzo_indicativo: "ingresso gratuito"
+come_arrivare: >
+  Via del Porto 154, 55054 Massarosa (LU).
+contatti:
+  telefono: "0584 975567"
+  email: "oasi.massaciuccoli@lipu.it"
+  sito_ufficiale: "https://www.lipu.it/oasi-riserve/riserva-naturale-chiarone-oasi-massaciuccoli"
+gestore: LIPU
+accessibilità: "passerella accessibile a persone con disabilità"
+immagine:
+  file: ./foto/riserva-naturale-del-chiarone-oasi-massaciuccoli.jpg
+  alt: "Il Lago di Massaciuccoli presso Torre del Lago Puccini"
+  autore: "PROPOLI87 (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2019-12-20
+  scattata_sul_posto: true
+fonte: "https://www.lipu.it/oasi-riserve/riserva-naturale-chiarone-oasi-massaciuccoli"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""
