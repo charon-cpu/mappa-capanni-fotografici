@@ -1,0 +1,23 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cavaliere d'Italia stilizzato, logo">
+  <!-- collo: striscia arrotondata sotto corpo/testa, stesso colore, per fondersi in un'unica sagoma -->
+  <path
+    fill="none"
+    stroke="currentColor"
+    stroke-width="6.4"
+    stroke-linecap="round"
+    d="M 35 23 Q 25 13 19 12"
+  />
+  <!-- corpo -->
+  <ellipse cx="41" cy="26" rx="11.5" ry="8.5" fill="currentColor" transform="rotate(-8 41 26)" />
+  <!-- testa -->
+  <circle cx="18.5" cy="12" r="5.2" fill="currentColor" />
+  <!-- becco -->
+  <path stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M 14 12.5 L 6 11" />
+  <!-- occhio -->
+  <circle cx="19.6" cy="10.6" r="1" fill="var(--logo-eye, #fff)" />
+  <!-- zampe lunghe -->
+  <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none">
+    <path d="M 36 33.5 L 33 50 M 33 50 L 28.5 55 M 33 50 L 37.5 54" />
+    <path d="M 45 33.5 L 44 50 M 44 50 L 39.5 55 M 44 50 L 48.5 54" />
+  </g>
+</svg>
