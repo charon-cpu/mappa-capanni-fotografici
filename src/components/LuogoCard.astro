@@ -1,4 +1,6 @@
 ---
+import FotoLuogo from './FotoLuogo.astro';
+
 interface Props {
   id: string;
   nome: string;
@@ -8,9 +10,10 @@ interface Props {
   regione: string;
   prenotazione_necessaria: boolean;
   url: string;
+  immagine?: any;
 }
 
-const { id, nome, tipo, comune, provincia, url, prenotazione_necessaria } = Astro.props;
+const { id, nome, tipo, comune, provincia, url, prenotazione_necessaria, immagine } = Astro.props;
 
 const etichetteTipo: Record<string, string> = {
   capanno_fotografico: 'Capanno fotografico',
@@ -20,6 +23,9 @@ const etichetteTipo: Record<string, string> = {
 ---
 
 <article class="luogo-card" id={`card-${id}`}>
+  <a href={url} tabindex="-1" aria-hidden="true">
+    <FotoLuogo immagine={immagine} nome={nome} variant="card" />
+  </a>
   <span class={`badge tipo-${tipo}`}>{etichetteTipo[tipo] ?? tipo}</span>
   <h3><a href={url}>{nome}</a></h3>
   <p class="meta">{comune} ({provincia})</p>

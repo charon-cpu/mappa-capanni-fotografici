@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import { SITE } from '../config/site';
 ---
 
 <Base
-  title="Pagina non trovata | Mappa dei Capanni Fotografici"
+  title={`Pagina non trovata | ${SITE.name}`}
   description="La pagina cercata non esiste."
 >
   <h1>Pagina non trovata</h1>
   <p>Il luogo o la pagina che cerchi non esiste, o è stata rimossa.</p>
-  <p><a href="/">Torna alla mappa</a></p>
+  <p><a href="/">Torna alla home</a></p>
 </Base>

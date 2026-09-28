@@ -1,0 +1,67 @@
+# Bozza NON pubblicata — Liguria
+# Generata durante la ricerca del blocco C. Nessuna di queste schede entra
+# nella build pubblica (vedi src/content.config.ts: legge solo data/, non
+# dati/bozze/). Prima di pubblicare una voce: verificarla di persona sulla
+# fonte ufficiale, completare tutti i campi "da verificare", raccogliere le
+# coordinate e spostarla in data/liguria/ seguendo lo schema in
+# docs/schema-scheda.md.
+candidati:
+  - id: terre-dei-bravin
+    nome: "Terre dei Bravin"
+    regione: "Liguria"
+    comune: "Mele"
+    provincia: "Genova"
+    tipo: oasi_riserva
+    gestore: "WWF Italia (Oasi Affiliata)"
+    fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-valloni
+    nome: "Oasi Valloni"
+    regione: "Liguria"
+    comune: "Villanova d'Albenga"
+    provincia: "Savona"
+    tipo: oasi_riserva
+    gestore: "WWF Italia (WWF Savona)"
+    fonte: "https://www.wwf.it/chi-siamo/presenza-sul-territorio/liguria/"
+    data_consultazione: "2026-09-28"
+    affidabilita: media
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-arcola
+    nome: "Oasi Arcola"
+    regione: "Liguria"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "LIPU"
+    fonte: "https://www.lipu.it/oasi-riserve"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""

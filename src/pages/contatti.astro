@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config/site';
+
+const mailtoBase = `mailto:${SITE.contactEmail}`;
+---
+
+<Base
+  title={`Contatti | ${SITE.name}`}
+  description="Come contattarci per segnalazioni, correzioni o richieste di rimozione di una scheda."
+>
+  <p><a href="/">&larr; Torna alla home</a></p>
+  <h1>Contatti</h1>
+  <p>
+    Per qualunque domanda, segnalazione o correzione scrivici a
+    <a href={mailtoBase}>{SITE.contactEmail}</a>.
+  </p>
+
+  <h2>Segnalare un nuovo luogo o una correzione</h2>
+  <p>
+    Usa la pagina <a href="/segnala">Segnala un luogo</a>, che prepara già
+    l'email con i campi utili per la verifica.
+  </p>
+
+  <h2>Sei il gestore di un luogo in mappa?</h2>
+  <p>
+    Se gestisci un capanno, un'oasi o una riserva presente in una scheda e
+    vuoi correggere un dato, aggiornare prezzi/orari o chiedere la
+    rimozione della scheda, scrivici a
+    <a href={`${mailtoBase}?subject=${encodeURIComponent('Richiesta gestore: correzione o rimozione scheda')}`}>
+      {SITE.contactEmail}
+    </a>
+    indicando il nome del luogo e cosa vuoi modificare. Rispondiamo e
+    aggiorniamo la scheda a mano.
+  </p>
+</Base>

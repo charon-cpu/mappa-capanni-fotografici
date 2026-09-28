@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import MappaLuoghi from '../components/MappaLuoghi.astro';
+import FilterBar from '../components/FilterBar.astro';
+import LuogoCard from '../components/LuogoCard.astro';
+import { slugify } from '../utils/slug';
+import { SITE } from '../config/site';
+
+const tuttiLuoghi = await getCollection('luoghi');
+
+const luoghi = tuttiLuoghi
+  .map((entry) => {
+    const d = entry.data;
+    return {
+      ...d,
+      url: `/${slugify(d.regione)}/${d.id}`,
+    };
+  })
+  .sort((a, b) => a.nome.localeCompare(b.nome));
+
+const regioni = [...new Set(luoghi.map((l) => l.regione))].sort();
+const specieUniche = [...new Set(luoghi.flatMap((l) => l.specie_principali))].sort();
+
+const luoghiPerMappa = luoghi.map((l) => ({
+  id: l.id,
+  nome: l.nome,
+  tipo: l.tipo,
+  regione: l.regione,
+  comune: l.comune,
+  specie: l.specie_principali,
+  prenotazione: l.prenotazione_necessaria,
+  lat: l.posizione.lat,
+  lon: l.posizione.lon,
+  url: l.url,
+}));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  description: SITE.tagline,
+  url: Astro.site,
+};
+---
+
+<Base
+  title={`Mappa | ${SITE.name}`}
+  description="Trova capanni fotografici a pagamento, osservatori per il birdwatching e oasi naturalistiche in Italia, filtrabili per regione, specie e periodo. Ogni scheda è verificata sulle fonti ufficiali."
+  jsonLd={jsonLd}
+>
+  <h1>Capanni fotografici e oasi naturalistiche in Italia</h1>
+  <p>
+    Una mappa di riferimento, verificata a mano sulle fonti ufficiali, per chi
+    cerca dove fotografare fauna selvatica o fare birdwatching in Italia.
+    Al momento copriamo il <strong>Veneto</strong> come regione pilota:
+    stiamo verificando le altre regioni una alla volta.
+  </p>
+
+  <FilterBar regioni={regioni} specie={specieUniche} />
+  <MappaLuoghi luoghi={luoghiPerMappa} />
+
+  <h2 class="visually-hidden">Elenco dei luoghi</h2>
+  <div class="card-grid">
+    {luoghi.map((l) => (
+      <LuogoCard
+        id={l.id}
+        nome={l.nome}
+        tipo={l.tipo}
+        comune={l.comune}
+        provincia={l.provincia}
+        regione={l.regione}
+        prenotazione_necessaria={l.prenotazione_necessaria}
+        immagine={l.immagine}
+        url={l.url}
+      />
+    ))}
+  </div>
+</Base>

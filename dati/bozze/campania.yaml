@@ -1,0 +1,187 @@
+# Bozza NON pubblicata — Campania
+# Generata durante la ricerca del blocco C. Nessuna di queste schede entra
+# nella build pubblica (vedi src/content.config.ts: legge solo data/, non
+# dati/bozze/). Prima di pubblicare una voce: verificarla di persona sulla
+# fonte ufficiale, completare tutti i campi "da verificare", raccogliere le
+# coordinate e spostarla in data/campania/ seguendo lo schema in
+# docs/schema-scheda.md.
+candidati:
+  - id: oasi-wwf-cratere-degli-astroni
+    nome: "Oasi WWF Cratere degli Astroni"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: la-punta-oasi-blu-affiliata-wwf
+    nome: "La Punta (Oasi Blu Affiliata WWF)"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-wwf-bosco-camerine
+    nome: "Oasi WWF Bosco Camerine"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-wwf-bosco-di-san-silvestro
+    nome: "Oasi WWF Bosco di San Silvestro"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-wwf-di-persano
+    nome: "Oasi WWF di Persano"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-wwf-diecimare
+    nome: "Oasi WWF Diecimare"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-wwf-grotte-del-bussento
+    nome: "Oasi WWF Grotte del Bussento"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "WWF Italia"
+    fonte: "https://www.parks.it/wwf/?reg=15"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-soglitelle
+    nome: "Oasi Soglitelle"
+    regione: "Campania"
+    comune: "Villa Literno"
+    provincia: "Caserta"
+    tipo: oasi_riserva
+    gestore: "LIPU"
+    fonte: "https://www.lipu.it/oasi-riserve"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""
+
+  - id: oasi-zone-umide-beneventane
+    nome: "Oasi Zone Umide Beneventane"
+    regione: "Campania"
+    comune: "da verificare"
+    provincia: "da verificare"
+    tipo: oasi_riserva
+    gestore: "LIPU"
+    fonte: "https://www.lipu.it/oasi-riserve"
+    data_consultazione: "2026-09-28"
+    affidabilita: alta
+    published: false
+    posizione:
+      precisione: non_rilevata
+      nota: "Coordinate non ancora raccolte: la bozza contiene solo i fatti verificati sulla fonte indicata (nome, comune se noto, gestore, tipo)."
+    prezzo_indicativo: "da verificare"
+    orari_periodo: "da verificare"
+    specie_principali: []
+    descrizione: "da verificare"
+    note_interne: ""

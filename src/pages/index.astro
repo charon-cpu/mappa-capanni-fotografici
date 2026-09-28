@@ -1,77 +1,138 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import MappaLuoghi from '../components/MappaLuoghi.astro';
-import FilterBar from '../components/FilterBar.astro';
-import LuogoCard from '../components/LuogoCard.astro';
-import { slugify } from '../utils/slug';
+import StepsComeFunziona from '../components/StepsComeFunziona.astro';
+import AnteprimaItalia from '../components/AnteprimaItalia.astro';
+import { SITE } from '../config/site';
 
 const tuttiLuoghi = await getCollection('luoghi');
+const numeroLuoghi = tuttiLuoghi.length;
+const regioniPubblicate = [...new Set(tuttiLuoghi.map((l) => l.data.regione))];
+const numeroRegioni = regioniPubblicate.length;
 
-const luoghi = tuttiLuoghi
-  .map((entry) => {
-    const d = entry.data;
-    return {
-      ...d,
-      url: `/${slugify(d.regione)}/${d.id}`,
-    };
-  })
-  .sort((a, b) => a.nome.localeCompare(b.nome));
+// Avviso di build (non bloccante): schede pubblicate ancora senza foto.
+const senzaFoto = tuttiLuoghi.filter((l) => !l.data.immagine).map((l) => l.data.id);
+if (senzaFoto.length > 0) {
+  console.warn(
+    `\n[foto mancanti] ${senzaFoto.length}/${numeroLuoghi} schede senza immagine: ${senzaFoto.join(', ')}\n` +
+      `Vedi docs/schema-scheda.md, sezione "Aggiungere una foto a una scheda".\n`
+  );
+}
 
-const regioni = [...new Set(luoghi.map((l) => l.regione))].sort();
-const specieUniche = [...new Set(luoghi.flatMap((l) => l.specie_principali))].sort();
-
-const luoghiPerMappa = luoghi.map((l) => ({
-  id: l.id,
-  nome: l.nome,
-  tipo: l.tipo,
-  regione: l.regione,
-  comune: l.comune,
-  specie: l.specie_principali,
-  prenotazione: l.prenotazione_necessaria,
-  lat: l.posizione.lat,
-  lon: l.posizione.lon,
-  url: l.url,
-}));
+// Tutte le regioni italiane: quelle non ancora pubblicate compaiono come
+// "in arrivo" (mai come già coperte — nessun dato promesso che non abbiamo).
+const tutteLeRegioni = [
+  'Valle d\'Aosta',
+  'Piemonte',
+  'Liguria',
+  'Lombardia',
+  'Trentino-Alto Adige',
+  'Veneto',
+  'Friuli Venezia Giulia',
+  'Emilia-Romagna',
+  'Toscana',
+  'Umbria',
+  'Marche',
+  'Lazio',
+  'Abruzzo',
+  'Molise',
+  'Campania',
+  'Puglia',
+  'Basilicata',
+  'Calabria',
+  'Sicilia',
+  'Sardegna',
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Mappa dei Capanni Fotografici',
-  description:
-    'Mappa dei capanni fotografici, osservatori per il birdwatching e oasi naturalistiche in Italia.',
+  name: SITE.name,
+  description: SITE.tagline,
   url: Astro.site,
 };
 ---
 
 <Base
-  title="Mappa dei Capanni Fotografici e delle Oasi Naturalistiche in Italia"
-  description="Trova capanni fotografici a pagamento, osservatori per il birdwatching e oasi naturalistiche in Italia, filtrabili per regione, specie e periodo. Ogni scheda è verificata sulle fonti ufficiali."
+  title={`${SITE.name} — capanni fotografici e oasi naturalistiche in Italia`}
+  description={`Mappa gratuita e senza registrazione di capanni fotografici e oasi naturalistiche in Italia, verificata a mano sulle fonti ufficiali. Oggi ${numeroLuoghi} schede in ${numeroRegioni} regione (Veneto), in crescita.`}
   jsonLd={jsonLd}
 >
-  <h1>Capanni fotografici e oasi naturalistiche in Italia</h1>
-  <p>
-    Una mappa di riferimento, verificata a mano sulle fonti ufficiali, per chi
-    cerca dove fotografare fauna selvatica o fare birdwatching in Italia.
-    Al momento copriamo il <strong>Veneto</strong> come regione pilota:
-    stiamo verificando le altre regioni una alla volta.
-  </p>
+  <section class="hero">
+    <h1>Trova il tuo prossimo capanno fotografico</h1>
+    <p>
+      La mappa dei capanni fotografici e delle oasi naturalistiche in Italia,
+      pensata per fotografi naturalisti italiani. Gratuita e senza
+      registrazione.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/mappa">Apri la mappa</a>
+      <a class="btn btn-secondary" href="#come-funziona">Come funziona</a>
+    </div>
+    <span class="hero-photo-credit">Foto segnaposto — da sostituire con una foto naturalistica reale</span>
+  </section>
 
-  <FilterBar regioni={regioni} specie={specieUniche} />
-  <MappaLuoghi luoghi={luoghiPerMappa} />
+  <section class="section" id="come-funziona">
+    <h2>Come funziona</h2>
+    <p class="section-lead">Tre passi, senza login e senza sorprese.</p>
+    <StepsComeFunziona />
+  </section>
 
-  <div class="card-grid">
-    {luoghi.map((l) => (
-      <LuogoCard
-        id={l.id}
-        nome={l.nome}
-        tipo={l.tipo}
-        comune={l.comune}
-        provincia={l.provincia}
-        regione={l.regione}
-        prenotazione_necessaria={l.prenotazione_necessaria}
-        url={l.url}
-      />
-    ))}
-  </div>
+  <section class="section">
+    <h2>{numeroLuoghi} luoghi verificati, si parte dal Veneto</h2>
+    <p class="section-lead">
+      Il sito cresce regione per regione: pubblichiamo solo quello che
+      abbiamo controllato di persona sulle fonti ufficiali.
+    </p>
+    <AnteprimaItalia numeroLuoghi={numeroLuoghi} />
+  </section>
+
+  <section class="section">
+    <h2>Perché fidarsi</h2>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <h3>Fonti ufficiali</h3>
+        <p>Ogni scheda nasce da un sito di un ente o gestore ufficiale (WWF, LIPU, parchi, comuni), mai copiata da altri siti.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Data di ultima verifica</h3>
+        <p>Capanni e oasi cambiano prezzi e orari: ogni scheda dice quando è stata controllata l'ultima volta.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Prudenza con la fauna</h3>
+        <p>Per i siti più delicati (nidi, specie sensibili) non mostriamo coordinate precise, solo l'area o il comune.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Revisione manuale</h3>
+        <p>Ogni segnalazione di un nuovo luogo o di una correzione viene controllata a mano prima di essere pubblicata.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Regioni disponibili e in arrivo</h2>
+    <p class="section-lead">
+      Copriamo oggi solo il Veneto. Le altre regioni sono in lavorazione,
+      una alla volta: non ci sono ancora schede pubblicate per loro.
+    </p>
+    <div class="region-list">
+      {tutteLeRegioni.map((regione) => {
+        const disponibile = regioniPubblicate.includes(regione);
+        return disponibile ? (
+          <a class="region-chip" data-available="true" href={`/regione/veneto`}>{regione}</a>
+        ) : (
+          <span class="region-chip" data-available="false">{regione} · in arrivo</span>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <h2>Conosci un capanno o un'oasi che manca?</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto">
+      Chiunque può segnalare un luogo nuovo o una correzione: revisioniamo
+      ogni segnalazione a mano prima di pubblicarla.
+    </p>
+    <a class="btn btn-primary" href="/segnala">Segnala un luogo</a>
+  </section>
 </Base>

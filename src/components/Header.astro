@@ -1,0 +1,83 @@
+---
+import Logo from './Logo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { SITE } from '../config/site';
+
+const navItems = [
+  { href: '/mappa', label: 'Mappa' },
+  { href: '/regione/veneto', label: 'Regioni' },
+  { href: '/specie/martin-pescatore', label: 'Specie' },
+  { href: '/segnala', label: 'Segnala un luogo' },
+  { href: '/come-funziona', label: 'Come funziona' },
+  { href: '/contatti', label: 'Contatti' },
+];
+---
+
+<header class="site-header">
+  <div class="container">
+    <div class="bar">
+      <div class="header-side left"></div>
+      <div class="brand-cell">
+        <a class="brand" href="/">
+          <Logo class="logo-mark" />
+          <span>{SITE.name}</span>
+        </a>
+      </div>
+      <div class="header-side right">
+        <ThemeToggle />
+        <button
+          type="button"
+          id="hamburger-btn"
+          class="icon-btn hamburger-btn"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+          aria-label="Apri il menu"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav id="nav-panel" class="nav-panel" data-open="false" aria-label="Menu principale">
+    {navItems.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const panel = document.getElementById('nav-panel');
+
+  function setOpen(open: boolean) {
+    panel?.setAttribute('data-open', String(open));
+    btn?.setAttribute('aria-expanded', String(open));
+    btn?.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+  }
+
+  function isOpen() {
+    return panel?.getAttribute('data-open') === 'true';
+  }
+
+  btn?.addEventListener('click', () => setOpen(!isOpen()));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) {
+      setOpen(false);
+      btn?.focus();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!isOpen()) return;
+    const target = e.target as Node;
+    if (panel?.contains(target) || btn?.contains(target)) return;
+    setOpen(false);
+  });
+
+  panel?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => setOpen(false));
+  });
+</script>

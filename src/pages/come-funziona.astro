@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import StepsComeFunziona from '../components/StepsComeFunziona.astro';
+import { SITE } from '../config/site';
+---
+
+<Base
+  title={`Come funziona | ${SITE.name}`}
+  description="Come raccogliamo e verifichiamo i dati di capanni fotografici e oasi naturalistiche, e come usare la mappa."
+>
+  <p><a href="/">&larr; Torna alla home</a></p>
+  <h1>Come funziona</h1>
+  <p>
+    {SITE.name} è una mappa gratuita e senza registrazione dei capanni
+    fotografici e delle oasi naturalistiche in Italia, pensata per fotografi
+    naturalisti.
+  </p>
+
+  <StepsComeFunziona />
+
+  <h2>Da dove vengono i dati</h2>
+  <p>
+    Ogni scheda è scritta da zero a partire da fonti ufficiali: siti di WWF,
+    LIPU, parchi nazionali e regionali, comuni ed enti gestori. Non copiamo
+    testi da altri siti: solo fatti verificati, con un link alla fonte
+    ufficiale in ogni scheda.
+  </p>
+  <p>
+    Capanni e oasi cambiano gestore, prezzi e orari nel tempo: per questo
+    ogni scheda riporta una data di <strong>ultima verifica</strong> e uno
+    stato di affidabilità (verificato, da verificare, segnalato come
+    obsoleto).
+  </p>
+
+  <h2>Copertura del sito</h2>
+  <p>
+    Oggi pubblichiamo solo il <strong>Veneto</strong>, come regione pilota.
+    Le altre regioni sono in lavorazione una alla volta: preferiamo poche
+    schede verificate bene, invece di tante schede incerte.
+  </p>
+
+  <h2>Prudenza con la fauna sensibile</h2>
+  <p>
+    Per i luoghi legati a specie delicate (nidi di rapaci, lupo, siti di
+    nidificazione) non mostriamo coordinate precise se questo potrebbe
+    esporli a disturbo: in quei casi indichiamo solo l'area o il comune. Non
+    mettiamo in mappa siti che non siano già pubblicamente promossi dai loro
+    gestori o enti.
+  </p>
+
+  <h2>Segnalazioni e correzioni</h2>
+  <p>
+    Chiunque può segnalare un nuovo luogo o una correzione dalla pagina
+    <a href="/segnala">Segnala un luogo</a>. Ogni segnalazione viene
+    controllata a mano prima di essere pubblicata: non c'è pubblicazione
+    automatica.
+  </p>
+</Base>

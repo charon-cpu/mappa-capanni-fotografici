@@ -1,18 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
+import { SITE } from '../config/site';
 
-const oggetto = encodeURIComponent('Segnalazione per Mappa dei Capanni Fotografici');
+const oggetto = encodeURIComponent(`Segnalazione per ${SITE.name}`);
 const corpo = encodeURIComponent(
   `Nome del luogo:\nComune/provincia:\nTipo (capanno fotografico / osservatorio birdwatching / oasi-riserva):\nLink al sito ufficiale del gestore:\nCosa vorresti segnalare (nuovo luogo, correzione, luogo chiuso...):\n\n`
 );
-const mailtoHref = `mailto:info@example.it?subject=${oggetto}&body=${corpo}`;
+const mailtoHref = `mailto:${SITE.contactEmail}?subject=${oggetto}&body=${corpo}`;
 ---
 
 <Base
-  title="Segnala un luogo o una correzione | Mappa dei Capanni Fotografici"
+  title={`Segnala un luogo o una correzione | ${SITE.name}`}
   description="Segnala un nuovo capanno fotografico, un'oasi o una correzione a una scheda esistente. Ogni segnalazione viene verificata a mano prima della pubblicazione."
 >
-  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <p><a href="/">&larr; Torna alla home</a></p>
   <h1>Segnala un luogo o una correzione</h1>
   <p>
     Questa mappa è mantenuta a mano: ogni luogo viene verificato sulle fonti
@@ -34,11 +35,11 @@ const mailtoHref = `mailto:info@example.it?subject=${oggetto}&body=${corpo}`;
   </ul>
 
   <p>
-    <a href={mailtoHref}>Scrivici via email</a>
+    <a class="btn btn-primary" href={mailtoHref}>Scrivici via email</a>
   </p>
 
   <p class="meta">
-    Nota per chi lavora sul progetto: sostituire <code>info@example.it</code>
-    con l'indirizzo email reale prima della pubblicazione.
+    Sei il gestore di un luogo già in mappa e vuoi chiedere una correzione o
+    la rimozione della scheda? Vai alla pagina <a href="/contatti">Contatti</a>.
   </p>
 </Base>

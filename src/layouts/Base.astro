@@ -1,14 +1,18 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import { SITE } from '../config/site';
 
 interface Props {
   title: string;
   description: string;
   jsonLd?: Record<string, unknown>;
+  ogImage?: string;
 }
 
-const { title, description, jsonLd } = Astro.props;
+const { title, description, jsonLd, ogImage = '/og/default.png' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
@@ -16,45 +20,65 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--
+      Anti-flash del tema: deve girare PRIMA del primo paint, quindi è uno
+      script bloccante in testa al <head> (non un modulo, non deferred).
+      Legge la preferenza salvata da ThemeToggle.astro; se non c'è nulla di
+      salvato il tema resta quello di default (chiaro) — non guardiamo
+      prefers-color-scheme di sistema, come richiesto.
+    -->
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem('tema-preferito');
+          if (saved === 'dark') {
+            document.documentElement.dataset.theme = 'dark';
+          }
+        } catch (e) {
+          /* storage non disponibile: resta il tema di default */
+        }
+      })();
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="/">Mappa dei Capanni Fotografici</a>
-        <nav>
-          <a href="/regione/veneto">Regioni</a>
-          <a href="/tipo/capanno_fotografico">Tipologie</a>
-          <a href="/segnala">Segnala un luogo</a>
-        </nav>
-      </div>
-    </header>
-    <main class="container">
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <Header />
+    <main id="contenuto" class="container">
       <slot />
     </main>
     <footer class="site-footer">
       <div class="container">
         <p>
-          Dati luoghi verificati manualmente dalle fonti ufficiali indicate in ogni scheda.
-          Mappa e dati cartografici &copy;
+          Dati raccolti da fonti ufficiali e verificati a mano, scheda per
+          scheda. Mappa e dati cartografici &copy;
           <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">
             contributori di OpenStreetMap
           </a>, licenza ODbL.
         </p>
         <p>
-          Hai notato un errore o vuoi segnalare un nuovo luogo?
-          <a href="/segnala">Scrivici</a>.
+          Hai notato un errore, vuoi segnalare un nuovo luogo o chiedere la
+          rimozione di una scheda?
+          <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
         </p>
       </div>
     </footer>

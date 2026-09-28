@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import LuogoCard from '../../components/LuogoCard.astro';
 import { slugify } from '../../utils/slug';
+import { SITE } from '../../config/site';
 
 export async function getStaticPaths() {
   const luoghi = await getCollection('luoghi');
@@ -22,13 +23,14 @@ const { regione, luoghi } = Astro.props;
 ---
 
 <Base
-  title={`Capanni fotografici e oasi in ${regione} | Mappa dei Capanni Fotografici`}
+  title={`Capanni fotografici e oasi in ${regione} | ${SITE.name}`}
   description={`Elenco verificato di capanni fotografici, osservatori per il birdwatching e oasi naturalistiche in ${regione}.`}
 >
-  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <p><a href="/mappa">&larr; Torna alla mappa</a></p>
   <h1>Capanni fotografici e oasi in {regione}</h1>
   <p>{luoghi.length} luoghi verificati in questa regione.</p>
 
+  <h2 class="visually-hidden">Elenco dei luoghi</h2>
   <div class="card-grid">
     {luoghi.map((l) => (
       <LuogoCard
@@ -39,6 +41,7 @@ const { regione, luoghi } = Astro.props;
         provincia={l.provincia}
         regione={l.regione}
         prenotazione_necessaria={l.prenotazione_necessaria}
+        immagine={l.immagine}
         url={l.url}
       />
     ))}
