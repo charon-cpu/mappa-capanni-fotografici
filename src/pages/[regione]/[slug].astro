@@ -115,7 +115,7 @@ if (luogo.immagine) {
         </tr>
         <tr>
           <th>Prenotazione</th>
-          <td>{luogo.prenotazione_necessaria ? 'Necessaria' : 'Non necessaria'}</td>
+          <td>{luogo.prenotazione_necessaria === null ? 'Da verificare' : luogo.prenotazione_necessaria ? 'Necessaria' : 'Non necessaria'}</td>
         </tr>
         <tr>
           <th>Prezzo indicativo</th>

@@ -1,0 +1,28 @@
+id: oasi-wwf-lago-di-san-giuliano
+nome: "Oasi WWF Lago di San Giuliano"
+tipo: oasi_riserva
+regione: Basilicata
+provincia: "da verificare"
+comune: "da verificare"
+posizione:
+  precisione: area_approssimata
+  lat: 40.500571
+  lon: 16.081953
+  nota_precisione: "Posizione approssimata al livello di \"Basilicata, Italia\" (geocodifica automatica): non ancora verificata con l'indirizzo esatto del gestore."
+descrizione: "Scheda pubblicata a partire da una fonte ufficiale (WWF Italia), in attesa di verifica completa: descrizione dettagliata non ancora scritta. Fonte e gestore sono reali e verificati; prezzo, orari, specie e indirizzo esatto restano da confermare."
+specie_principali: []
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: null
+prezzo_indicativo: "da verificare"
+come_arrivare: ", Basilicata. Indirizzo esatto da verificare sulla fonte ufficiale."
+contatti:
+  telefono: "da verificare"
+  email: "da verificare"
+  sito_ufficiale: "https://www.parks.it/wwf/?reg=17"
+gestore: "WWF Italia"
+accessibilità: "da verificare"
+fonte: "https://www.parks.it/wwf/?reg=17"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: "Pubblicata in blocco da bozza (affidabilità originaria: alta). Prezzo/orari/specie/descrizione/indirizzo esatto NON verificati: completare prima di considerarla una scheda di riferimento."

@@ -1,0 +1,28 @@
+id: oasi-wwf-monte-arcosu
+nome: "Oasi WWF Monte Arcosu"
+tipo: oasi_riserva
+regione: Sardegna
+provincia: "Casteddu/Cagliari"
+comune: "Uda/Uta"
+posizione:
+  precisione: area_approssimata
+  lat: 39.1952134
+  lon: 8.9087779
+  nota_precisione: "Posizione del punto d'interesse \"Oasi WWF Monte Arcosu, Sardegna, Italia\" trovato su OpenStreetMap (geocodifica automatica): da confermare comunque con l'indirizzo esatto del gestore."
+descrizione: "Scheda pubblicata a partire da una fonte ufficiale (WWF Italia), in attesa di verifica completa: descrizione dettagliata non ancora scritta. Fonte e gestore sono reali e verificati; prezzo, orari, specie e indirizzo esatto restano da confermare."
+specie_principali: []
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: null
+prezzo_indicativo: "da verificare"
+come_arrivare: ", Sardegna. Indirizzo esatto da verificare sulla fonte ufficiale."
+contatti:
+  telefono: "da verificare"
+  email: "da verificare"
+  sito_ufficiale: "https://www.parks.it/wwf/?reg=20"
+gestore: "WWF Italia"
+accessibilità: "da verificare"
+fonte: "https://www.parks.it/wwf/?reg=20"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: "Pubblicata in blocco da bozza (affidabilità originaria: alta). Prezzo/orari/specie/descrizione/indirizzo esatto NON verificati: completare prima di considerarla una scheda di riferimento."

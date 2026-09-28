@@ -1,0 +1,28 @@
+id: oasi-carloforte
+nome: "Oasi Carloforte"
+tipo: oasi_riserva
+regione: Sardegna
+provincia: "Sud Sardegna"
+comune: Carloforte
+posizione:
+  precisione: area_approssimata
+  lat: 39.1454814
+  lon: 8.306427
+  nota_precisione: "Posizione del punto d'interesse \"Oasi Carloforte, Sardegna, Italia\" trovato su OpenStreetMap (geocodifica automatica): da confermare comunque con l'indirizzo esatto del gestore."
+descrizione: "Scheda pubblicata a partire da una fonte ufficiale (LIPU), in attesa di verifica completa: descrizione dettagliata non ancora scritta. Fonte e gestore sono reali e verificati; prezzo, orari, specie e indirizzo esatto restano da confermare."
+specie_principali: []
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: null
+prezzo_indicativo: "da verificare"
+come_arrivare: "Carloforte (Sud Sardegna), Sardegna. Indirizzo esatto da verificare sulla fonte ufficiale."
+contatti:
+  telefono: "da verificare"
+  email: "da verificare"
+  sito_ufficiale: "https://www.lipu.it/oasi-riserve"
+gestore: LIPU
+accessibilità: "da verificare"
+fonte: "https://www.lipu.it/oasi-riserve"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: "Pubblicata in blocco da bozza (affidabilità originaria: alta). Prezzo/orari/specie/descrizione/indirizzo esatto NON verificati: completare prima di considerarla una scheda di riferimento."
