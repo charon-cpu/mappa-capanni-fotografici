@@ -44,15 +44,16 @@ const ogSvg = `
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)" />
-  <g transform="translate(150,60) scale(4.2)" color="#ffffff">
-    <path fill="none" stroke="currentColor" stroke-width="6.4" stroke-linecap="round" d="M 35 23 Q 25 13 19 12" />
-    <ellipse cx="41" cy="26" rx="11.5" ry="8.5" fill="currentColor" transform="rotate(-8 41 26)" />
-    <circle cx="18.5" cy="12" r="5.2" fill="currentColor" />
-    <path stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M 14 12.5 L 6 11" />
-    <circle cx="19.6" cy="10.6" r="1" fill="#0f6b5c" />
-    <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none">
-      <path d="M 36 33.5 L 33 50 M 33 50 L 28.5 55 M 33 50 L 37.5 54" />
-      <path d="M 45 33.5 L 44 50 M 44 50 L 39.5 55 M 44 50 L 48.5 54" />
+  <g transform="translate(150,90) scale(3.6)" color="#ffffff">
+    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 6 50 L 58 50" opacity="0.55" />
+    <path fill="currentColor" d="M 48 32 L 58 27 L 58 39 Z" />
+    <ellipse cx="35" cy="35" rx="17" ry="14" fill="currentColor" />
+    <circle cx="19" cy="23" r="14" fill="currentColor" />
+    <path fill="currentColor" d="M 8 20 L 8 27 L 26 24 Z" />
+    <circle cx="20.5" cy="21" r="1.6" fill="#0f6b5c" />
+    <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <path d="M 29 48 L 29 50" />
+      <path d="M 40 48 L 40 50" />
     </g>
   </g>
   <text x="150" y="430" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#ffffff">Capanni Italia</text>
