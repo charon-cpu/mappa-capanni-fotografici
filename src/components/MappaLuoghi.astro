@@ -66,7 +66,16 @@ const { luoghi } = Astro.props;
   const dataEl = document.getElementById('luoghi-data');
   const luoghi = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
 
-  const map = L.map('map', { scrollWheelZoom: false }).setView([45.5, 12.0], 8);
+  const map = L.map('map', { scrollWheelZoom: false });
+
+  // Inquadra tutti i luoghi pubblicati invece di un centro fisso: con più
+  // regioni pubblicate una vista fissa sul Veneto lascerebbe fuori le altre.
+  if (luoghi.length > 0) {
+    const bounds = L.latLngBounds(luoghi.map((l: any) => [l.lat, l.lon]));
+    map.fitBounds(bounds, { padding: [24, 24] });
+  } else {
+    map.setView([42.5, 12.5], 6);
+  }
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,

@@ -1,7 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import StepsComeFunziona from '../components/StepsComeFunziona.astro';
 import { SITE } from '../config/site';
+
+const tuttiLuoghi = await getCollection('luoghi');
+const regioniPubblicate = [...new Set(tuttiLuoghi.map((l) => l.data.regione))];
+function elencoItaliano(voci: string[]): string {
+  if (voci.length === 0) return '';
+  if (voci.length === 1) return voci[0];
+  return `${voci.slice(0, -1).join(', ')} e ${voci[voci.length - 1]}`;
+}
+const regioniElenco = elencoItaliano(regioniPubblicate);
 ---
 
 <Base
@@ -34,9 +44,9 @@ import { SITE } from '../config/site';
 
   <h2>Copertura del sito</h2>
   <p>
-    Oggi pubblichiamo solo il <strong>Veneto</strong>, come regione pilota.
-    Le altre regioni sono in lavorazione una alla volta: preferiamo poche
-    schede verificate bene, invece di tante schede incerte.
+    Oggi pubblichiamo <strong>{regioniElenco}</strong>. Le altre regioni sono
+    in lavorazione una alla volta: preferiamo poche schede verificate bene,
+    invece di tante schede incerte.
   </p>
 
   <h2>Prudenza con la fauna sensibile</h2>

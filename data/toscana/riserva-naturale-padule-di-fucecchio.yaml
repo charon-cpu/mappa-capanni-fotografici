@@ -1,0 +1,42 @@
+id: riserva-naturale-padule-di-fucecchio
+nome: "Riserva naturale Padule di Fucecchio"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Pistoia
+comune: Larciano
+posizione:
+  precisione: area_approssimata
+  lat: 43.8229338
+  lon: 10.838191
+  nota_precisione: "Coordinata sulla strada di accesso (zona Castelmartini): l'indirizzo esatto della riserva non è geocodificabile con precisione da fonti aperte."
+descrizione: >
+  La più grande palude interna d'Italia (1.800 ettari), gestita da LIPU dal 2024, con oltre 240 specie di uccelli documentate: airone rosso, tarabuso, spatola e mestolone tra le specie di maggior pregio conservazionistico. L'osservatorio faunistico "Le Morette" è sempre visitabile liberamente dall'esterno, con personale LIPU e cannocchiali nei weekend estivi.
+specie_principali:
+  - "Airone rosso"
+  - Tarabuso
+  - Spatola
+  - Mestolone
+  - "Falco di palude"
+periodo_migliore:
+  - ottobre-maggio
+prenotazione_necessaria: false
+prezzo_indicativo: "ingresso gratuito (osservatorio Le Morette)"
+come_arrivare: >
+  Via Castelmartini 115, Larciano (PT).
+contatti:
+  telefono: "0573 84540"
+  email: "riserva.fucecchio@lipu.it"
+  sito_ufficiale: "https://www.lipu.it/oasi-riserve/riserva-naturale-padule-fucecchio"
+gestore: LIPU
+accessibilità: "osservatorio Le Morette sempre accessibile dall'esterno"
+immagine:
+  file: ./foto/riserva-naturale-padule-di-fucecchio.jpg
+  alt: "Lepre selvatica nella Riserva Naturale Padule di Fucecchio"
+  autore: "FeliceFlorio (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2020-05-28
+  scattata_sul_posto: true
+fonte: "https://www.lipu.it/oasi-riserve/riserva-naturale-padule-fucecchio"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

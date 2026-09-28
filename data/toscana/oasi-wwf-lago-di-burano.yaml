@@ -1,0 +1,44 @@
+id: oasi-wwf-lago-di-burano
+nome: "Oasi WWF Lago di Burano"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Grosseto
+comune: Capalbio
+posizione:
+  precisione: esatta
+  lat: 42.4084215
+  lon: 11.3717085
+  nota_precisione: ""
+descrizione: >
+  Riserva WWF sul lago costiero di Burano, in Maremma, con oltre 300 specie di uccelli osservate. Tra le specie caratteristiche folaga, moriglione, moretta tabaccata e falco di palude; tra i mammiferi istrice, tasso, volpe, donnola e cinghiale, con passaggi occasionali di lupo. Le visite guidate partono dal centro visite dell'oasi.
+specie_principali:
+  - Folaga
+  - Moriglione
+  - "Moretta tabaccata"
+  - "Falco di palude"
+  - Porciglione
+  - Istrice
+  - Tasso
+periodo_migliore:
+  - "autunno-primavera (migrazioni)"
+prenotazione_necessaria: true
+prezzo_indicativo: "8 € visita guidata; 2 € passeggiata al centro visite"
+come_arrivare: >
+  Strada provinciale Litoranea del Chiarone, 35 - Capalbio Scalo (GR). Raggiungibile anche in treno (stazione di Capalbio Scalo).
+contatti:
+  telefono: "0564 898829"
+  email: "lagodiburano@wwf.it"
+  sito_ufficiale: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/lago-di-burano/"
+gestore: "WWF Italia"
+accessibilità: "non specificata, da verificare"
+immagine:
+  file: ./foto/oasi-wwf-lago-di-burano.jpg
+  alt: "Birdwatching tra i canneti dell'Oasi Lago di Burano"
+  autore: "66colpi (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2019-08-16
+  scattata_sul_posto: true
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/lago-di-burano/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

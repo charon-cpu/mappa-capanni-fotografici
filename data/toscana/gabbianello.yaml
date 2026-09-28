@@ -1,0 +1,46 @@
+id: gabbianello
+nome: "Oasi WWF Gabbianello"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Firenze
+comune: "Barberino di Mugello"
+posizione:
+  precisione: esatta
+  lat: 44.0132915
+  lon: 11.2894405
+  nota_precisione: ""
+descrizione: >
+  Area protetta di 25 ettari sulle rive del Lago di Bilancino, nel Mugello. Rifugio per uccelli migratori come tarabuso, cavaliere d'Italia e avocetta grazie alla fitta vegetazione palustre; in inverno e primavera si osservano anche fenicotteri rosa e falchi pescatori di passo, oltre a diverse specie di anatre (moriglione, mestolone, alzavola, fischione).
+specie_principali:
+  - Tarabuso
+  - "Cavaliere d'Italia"
+  - Avocetta
+  - "Falco pescatore"
+  - "Albanella reale"
+  - "Falco pellegrino"
+  - Moriglione
+  - Alzavola
+periodo_migliore:
+  - inverno
+  - primavera
+prenotazione_necessaria: false
+prezzo_indicativo: "da verificare"
+come_arrivare: >
+  Via di Galliano 1, 50031 Barberino di Mugello (FI), 5 km da Barberino, 30 km da Firenze.
+contatti:
+  telefono: "055 5535003 / 333 9537114"
+  email: "gabbianello@wwf.it"
+  sito_ufficiale: "http://www.gabbianello.it"
+gestore: "WWF Italia (Oasi Affiliata)"
+accessibilità: "da verificare"
+immagine:
+  file: ./foto/gabbianello.jpg
+  alt: "Vista del Lago di Bilancino dall'Oasi Gabbianello"
+  autore: "Morelli Dario (Wikimedia Commons)"
+  licenza: "CC BY-SA 3.0"
+  data_scatto: 2012-09-03
+  scattata_sul_posto: true
+fonte: "https://www.parks.it/anp.gabbianello.boscotondo/index.php"
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

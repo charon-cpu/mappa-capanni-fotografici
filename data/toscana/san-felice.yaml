@@ -1,0 +1,40 @@
+id: san-felice
+nome: "Oasi WWF San Felice"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Grosseto
+comune: Grosseto
+posizione:
+  precisione: area_approssimata
+  lat: 42.71785
+  lon: 10.9810013
+  nota_precisione: "Coordinata al livello della località Marina di Grosseto: indirizzo puntuale (Via Costiera) non geocodificabile con precisione."
+descrizione: >
+  Area protetta di 47,7 ettari lungo la costa tra Marina di Grosseto e Castiglione della Pescaia, nata dalla collaborazione tra il gruppo Allianz (proprietario dei terreni) e il WWF. La ghiandaia marina è la specie simbolo, nidificante anche grazie alle cassette-nido installate dai volontari WWF.
+specie_principali:
+  - "Ghiandaia marina"
+  - "Uccelli acquatici (specie da verificare)"
+periodo_migliore:
+  - "da verificare (probabile primavera-estate per la nidificazione)"
+prenotazione_necessaria: true
+prezzo_indicativo: "da verificare"
+come_arrivare: >
+  Via Costiera, Marina di Grosseto (GR), lungo la costa verso Castiglione della Pescaia.
+contatti:
+  telefono: "375 5828328"
+  email: "info@silvacoop.com"
+  sito_ufficiale: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/oasi-san-felice/"
+gestore: "WWF Italia (Oasi Affiliata, Allianz Group)"
+accessibilità: "da verificare"
+immagine:
+  file: ./foto/san-felice.jpg
+  alt: "Il canale San Leopoldo nell'Oasi di San Felice"
+  autore: "Legione899 (Wikimedia Commons)"
+  licenza: "CC BY-SA 4.0"
+  data_scatto: 2016-09-18
+  scattata_sul_posto: true
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/oasi-san-felice/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Elenco specie e periodo migliore incompleti nelle fonti consultate.

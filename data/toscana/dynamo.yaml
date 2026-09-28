@@ -1,0 +1,39 @@
+id: dynamo
+nome: "Oasi Dynamo"
+tipo: oasi_riserva
+regione: Toscana
+provincia: Pistoia
+comune: "San Marcello Piteglio"
+posizione:
+  precisione: area_approssimata
+  lat: 44.0282307
+  lon: 10.7657375
+  nota_precisione: "Coordinata al livello della frazione di Piteglio: indirizzo esatto (Via Privata San Vito 1) non geocodificabile con precisione da fonti aperte."
+descrizione: >
+  Riserva WWF affiliata di oltre 1.000 ettari nell'Appennino pistoiese, tra i 600 e i 1.100 metri di quota. Ospita grandi ungulati (capriolo, muflone, cervo, daino, cinghiale), carnivori (lupo, faina, volpe, donnola) e uccelli come il picchio nero e l'averla cenerina. Le visite sono guidate, solo su calendario e prenotazione.
+specie_principali:
+  - Lupo
+  - Capriolo
+  - Muflone
+  - Cervo
+  - "Picchio nero"
+  - "Picchio verde"
+  - "Averla cenerina"
+  - Tottavilla
+periodo_migliore:
+  - "da verificare"
+prenotazione_necessaria: true
+prezzo_indicativo: "da verificare"
+come_arrivare: >
+  Via Privata San Vito 1, Località Piteglio, San Marcello Piteglio (PT). Da Firenze/Lucca: A11 uscita Pistoia, verso l'Abetone, a Le Piastre svoltare per Piteglio.
+contatti:
+  telefono: "345 6410737"
+  email: "info@oasidynamo.org"
+  sito_ufficiale: "https://www.oasidynamo.org/"
+gestore: "Oasi Dynamo Società Agricola Srl (Oasi Affiliata WWF)"
+accessibilità: "da verificare"
+fonte: "https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/oasi-dynamo/"
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Nessuna foto con licenza chiara trovata su Wikimedia Commons per questo luogo: resta segnaposto.

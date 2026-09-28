@@ -20,6 +20,12 @@ const luoghi = tuttiLuoghi
   .sort((a, b) => a.nome.localeCompare(b.nome));
 
 const regioni = [...new Set(luoghi.map((l) => l.regione))].sort();
+function elencoItaliano(voci: string[]): string {
+  if (voci.length === 0) return '';
+  if (voci.length === 1) return voci[0];
+  return `${voci.slice(0, -1).join(', ')} e ${voci[voci.length - 1]}`;
+}
+const regioniElenco = elencoItaliano(regioni);
 const specieUniche = [...new Set(luoghi.flatMap((l) => l.specie_principali))].sort();
 
 const luoghiPerMappa = luoghi.map((l) => ({
@@ -53,7 +59,7 @@ const jsonLd = {
   <p>
     Una mappa di riferimento, verificata a mano sulle fonti ufficiali, per chi
     cerca dove fotografare fauna selvatica o fare birdwatching in Italia.
-    Al momento copriamo il <strong>Veneto</strong> come regione pilota:
+    Al momento copriamo <strong>{regioniElenco}</strong>:
     stiamo verificando le altre regioni una alla volta.
   </p>
 
