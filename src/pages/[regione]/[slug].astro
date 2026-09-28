@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { slugify } from '../../utils/slug';
+
+export async function getStaticPaths() {
+  const luoghi = await getCollection('luoghi');
+  return luoghi.map((entry) => ({
+    params: { regione: slugify(entry.data.regione), slug: entry.data.id },
+    props: { luogo: entry.data },
+  }));
+}
+
+const { luogo } = Astro.props;
+
+const etichetteTipo: Record<string, string> = {
+  capanno_fotografico: 'Capanno fotografico',
+  osservatorio_birdwatching: 'Osservatorio birdwatching',
+  oasi_riserva: 'Oasi / riserva',
+};
+
+const etichetteAffidabilita: Record<string, string> = {
+  verificato: 'Dati verificati sulla fonte ufficiale indicata',
+  da_verificare: 'Alcuni dati non sono confermati dalla fonte ufficiale: verificare prima di prenotare',
+  segnalato_obsoleto: 'Questa scheda è stata segnalata come non aggiornata',
+};
+
+const dataVerifica = new Date(luogo.ultima_verifica).toLocaleDateString('it-IT', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': luogo.tipo === 'capanno_fotografico' ? 'TouristAttraction' : 'Place',
+  name: luogo.nome,
+  description: luogo.descrizione,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: luogo.comune,
+    addressRegion: luogo.regione,
+    addressCountry: 'IT',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: luogo.posizione.lat,
+    longitude: luogo.posizione.lon,
+  },
+  url: luogo.contatti.sito_ufficiale,
+};
+
+const title = `${luogo.nome} — ${luogo.comune} (${luogo.provincia}) | Mappa dei Capanni Fotografici`;
+const description = luogo.descrizione.slice(0, 155).trim();
+---
+
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <p><a href="/">&larr; Torna alla mappa</a></p>
+
+  <div class="scheda-header">
+    <span class={`badge tipo-${luogo.tipo}`}>{etichetteTipo[luogo.tipo] ?? luogo.tipo}</span>
+    <h1>{luogo.nome}</h1>
+    <p class="meta">{luogo.comune} ({luogo.provincia}), {luogo.regione}</p>
+  </div>
+
+  <div class={`affidabilita-nota ${luogo.stato_affidabilità}`}>
+    {etichetteAffidabilita[luogo.stato_affidabilità]}. Ultima verifica: {dataVerifica}.
+    Fonte: <a href={luogo.fonte} target="_blank" rel="noopener">{luogo.fonte}</a>
+  </div>
+
+  {luogo.posizione.precisione === 'area_approssimata' && (
+    <div class="affidabilita-nota da_verificare">
+      Posizione mostrata in modo approssimato. {luogo.posizione.nota_precisione}
+    </div>
+  )}
+
+  <div class="scheda-grid">
+    <div>
+      <h2>Descrizione</h2>
+      <p>{luogo.descrizione}</p>
+
+      <h2>Specie principali</h2>
+      {luogo.specie_principali.length > 0 ? (
+        <div class="pill-row">
+          {luogo.specie_principali.map((s) => (
+            <a class="badge" href={`/specie/${slugify(s)}`}>{s}</a>
+          ))}
+        </div>
+      ) : (
+        <p class="meta">Elenco specie non ancora verificato per questo luogo.</p>
+      )}
+
+      <h2>Come arrivare</h2>
+      <p>{luogo.come_arrivare}</p>
+    </div>
+
+    <div>
+      <h2>Informazioni pratiche</h2>
+      <table class="info-table">
+        <tr>
+          <th>Periodo migliore</th>
+          <td>{luogo.periodo_migliore.join(', ')}</td>
+        </tr>
+        <tr>
+          <th>Prenotazione</th>
+          <td>{luogo.prenotazione_necessaria ? 'Necessaria' : 'Non necessaria'}</td>
+        </tr>
+        <tr>
+          <th>Prezzo indicativo</th>
+          <td>{luogo.prezzo_indicativo}</td>
+        </tr>
+        <tr>
+          <th>Gestore</th>
+          <td>{luogo.gestore}</td>
+        </tr>
+        <tr>
+          <th>Telefono</th>
+          <td>{luogo.contatti.telefono}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>{luogo.contatti.email}</td>
+        </tr>
+        <tr>
+          <th>Sito ufficiale</th>
+          <td><a href={luogo.contatti.sito_ufficiale} target="_blank" rel="noopener">{luogo.contatti.sito_ufficiale}</a></td>
+        </tr>
+        <tr>
+          <th>Accessibilità</th>
+          <td>{luogo.accessibilità}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</Base>

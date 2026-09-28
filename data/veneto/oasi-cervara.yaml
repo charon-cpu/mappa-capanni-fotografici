@@ -1,0 +1,51 @@
+id: oasi-cervara
+nome: Capanni fotografici dell'Oasi Cervara
+tipo: capanno_fotografico
+regione: Veneto
+provincia: Treviso
+comune: Quinto di Treviso
+posizione:
+  precisione: esatta
+  lat: 45.6379750
+  lon: 12.1439457
+  nota_precisione: >
+    Coordinata sulla Via Cornarotta (Santa Cristina di Quinto di Treviso),
+    strada di accesso all'oasi; da affinare sull'ingresso esatto.
+descrizione: >
+  Oasi naturalistica sul fiume Sile con due capanni fotografici a
+  pagamento, "Poiana" e "Porciglione". Il capanno Poiana è frequentato da
+  poiana, gazza e ghiandaia; il capanno Porciglione da martin pescatore,
+  picchio rosso maggiore e piccoli passeriformi di bosco. Nell'oasi sono
+  osservabili anche cicogna bianca, airone bianco maggiore, garzetta,
+  cormorano, airone cenerino, barbagianni e cigno reale.
+specie_principali:
+  - Martin pescatore
+  - Poiana
+  - Picchio rosso maggiore
+  - Sparviero
+  - Cicogna bianca
+  - Airone bianco maggiore
+  - Garzetta
+  - Barbagianni
+periodo_migliore:
+  - da verificare (dato non specificato nella fonte)
+prenotazione_necessaria: true
+prezzo_indicativo: "50 € a persona per la giornata nel capanno + 7 € ingresso all'oasi (dato da riconfermare direttamente col gestore)"
+come_arrivare: >
+  Via Cornarotta 50, frazione Santa Cristina, 31055 Quinto di Treviso (TV).
+contatti:
+  telefono: "0422 23815"
+  email: oasicervara@gmail.com
+  sito_ufficiale: http://www.oasicervara.it
+gestore: Oasi Cervara (gestione locale, area del Parco Naturale Regionale del Fiume Sile)
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.comune.quintoditreviso.tv.it/loasi-naturalistica-di-cervara/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Il sito ufficiale oasicervara.it ha un certificato SSL non valido
+  (mismatch con arubabusiness.it): non è stato possibile leggerlo
+  direttamente, dati ricostruiti da fonti secondarie (comune di Quinto di
+  Treviso, articoli di settore). Verificare prezzi/periodo apertura
+  telefonicamente prima della pubblicazione.

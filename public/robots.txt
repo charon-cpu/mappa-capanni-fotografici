@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mappa-capanni-fotografici.onrender.com/sitemap-index.xml

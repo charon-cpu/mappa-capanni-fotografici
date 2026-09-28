@@ -1,0 +1,117 @@
+---
+import 'leaflet/dist/leaflet.css';
+
+interface LuogoMappa {
+  id: string;
+  nome: string;
+  tipo: string;
+  regione: string;
+  comune: string;
+  specie: string[];
+  prenotazione: boolean;
+  lat: number;
+  lon: number;
+  url: string;
+}
+
+interface Props {
+  luoghi: LuogoMappa[];
+}
+
+const { luoghi } = Astro.props;
+---
+
+<div id="map" role="application" aria-label="Mappa dei capanni fotografici e delle oasi"></div>
+<script type="application/json" id="luoghi-data" set:html={JSON.stringify(luoghi)} />
+
+<script>
+  import L from 'leaflet';
+  import iconUrl from 'leaflet/dist/images/marker-icon.png';
+  import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
+  import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+
+  const defaultIcon = L.icon({
+    iconUrl,
+    iconRetinaUrl,
+    shadowUrl,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  });
+
+  const coloriTipo: Record<string, string> = {
+    capanno_fotografico: '#c96f34',
+    osservatorio_birdwatching: '#2f5233',
+    oasi_riserva: '#6b7d6b',
+  };
+
+  function coloredIcon(colore: string) {
+    return L.divIcon({
+      className: 'marker-dot',
+      html: `<span style="display:block;width:16px;height:16px;border-radius:50%;background:${colore};border:2px solid white;box-shadow:0 0 0 1px rgba(0,0,0,0.25);"></span>`,
+      iconSize: [16, 16],
+      iconAnchor: [8, 8],
+      popupAnchor: [0, -8],
+    });
+  }
+
+  const dataEl = document.getElementById('luoghi-data');
+  const luoghi = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+
+  const map = L.map('map', { scrollWheelZoom: false }).setView([45.5, 12.0], 8);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  const markers: { luogo: any; marker: L.Marker }[] = [];
+
+  for (const luogo of luoghi) {
+    const marker = L.marker([luogo.lat, luogo.lon], {
+      icon: coloredIcon(coloriTipo[luogo.tipo] ?? '#555'),
+    })
+      .addTo(map)
+      .bindPopup(
+        `<strong><a href="${luogo.url}">${luogo.nome}</a></strong><br>${luogo.comune}`
+      );
+    markers.push({ luogo, marker });
+  }
+
+  function applyFilters() {
+    const regioneSel = document.getElementById('filtro-regione') as HTMLSelectElement | null;
+    const tipoSel = document.getElementById('filtro-tipo') as HTMLSelectElement | null;
+    const specieSel = document.getElementById('filtro-specie') as HTMLSelectElement | null;
+    const prenotazioneSel = document.getElementById('filtro-prenotazione') as HTMLSelectElement | null;
+
+    const regione = regioneSel?.value ?? '';
+    const tipo = tipoSel?.value ?? '';
+    const specie = specieSel?.value ?? '';
+    const prenotazione = prenotazioneSel?.value ?? '';
+
+    for (const { luogo, marker } of markers) {
+      const matchRegione = !regione || luogo.regione === regione;
+      const matchTipo = !tipo || luogo.tipo === tipo;
+      const matchSpecie = !specie || luogo.specie.includes(specie);
+      const matchPrenotazione =
+        !prenotazione || String(luogo.prenotazione) === prenotazione;
+
+      const visibile = matchRegione && matchTipo && matchSpecie && matchPrenotazione;
+
+      const el = document.getElementById(`card-${luogo.id}`);
+      if (el) el.style.display = visibile ? '' : 'none';
+
+      if (visibile) {
+        if (!map.hasLayer(marker)) marker.addTo(map);
+      } else {
+        if (map.hasLayer(marker)) map.removeLayer(marker);
+      }
+    }
+  }
+
+  document
+    .querySelectorAll('#filtro-regione, #filtro-tipo, #filtro-specie, #filtro-prenotazione')
+    .forEach((el) => el.addEventListener('change', applyFilters));
+</script>

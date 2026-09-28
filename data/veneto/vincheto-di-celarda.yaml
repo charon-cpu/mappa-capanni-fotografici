@@ -1,0 +1,48 @@
+id: vincheto-di-celarda
+nome: Riserva Naturale Biogenetica Vincheto di Celarda
+tipo: oasi_riserva
+regione: Veneto
+provincia: Belluno
+comune: Feltre
+posizione:
+  precisione: esatta
+  lat: 46.0172410
+  lon: 11.9756630
+  nota_precisione: ""
+descrizione: >
+  Riserva naturale statale (D.M. 28/12/1971) nell'antico alveo del
+  Piave, in pianura a 230 m di quota, facilmente accessibile a piedi.
+  Zona umida di importanza internazionale Ramsar, ZSC e ZPS. Il nome
+  deriva dalla coltivazione di vinchi (rami flessibili di salice) per
+  la vimineria. Nidificano 45 specie di uccelli, con altre 17 nelle
+  aree immediatamente adiacenti; presenti anche pipistrelli, moscardino,
+  ululone dal ventre giallo, pelobate fosco e trota marmorata.
+specie_principali:
+  - Smergo maggiore
+  - Gufo comune
+  - Quaglia
+  - Stiaccino
+  - Strillozzo
+  - Ululone dal ventre giallo
+  - Trota marmorata
+periodo_migliore:
+  - primavera-estate (nidificazione)
+prenotazione_necessaria: false
+prezzo_indicativo: "ingresso gratuito"
+come_arrivare: >
+  Da Feltre (BL), Strada Statale 50 in direzione Celarda, pochi
+  chilometri dal centro città.
+contatti:
+  telefono: "non specificato, contattare tramite modulo sul sito"
+  email: "non specificato, da verificare"
+  sito_ufficiale: https://rgpbio.it/riserva/vincheto-di-celarda/
+gestore: Reparto Carabinieri Biodiversità di Belluno
+accessibilità: "percorso pianeggiante su viottoli tracciati, obbligo di non uscire dai sentieri"
+immagini: []
+fonte: https://rgpbio.it/riserva/vincheto-di-celarda/
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: >
+  Accesso libero 8:00-18:00, chiusa il mercoledì. Nessun contatto
+  telefonico/email diretto trovato, solo un modulo "richiedi
+  informazioni" sul sito ufficiale.

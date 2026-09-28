@@ -1,0 +1,47 @@
+id: palude-busatello
+nome: Oasi WWF Palude del Busatello
+tipo: oasi_riserva
+regione: Veneto
+provincia: Verona
+comune: Gazzo Veronese
+posizione:
+  precisione: esatta
+  lat: 45.1108944
+  lon: 11.0892926
+  nota_precisione: ""
+descrizione: >
+  Ultimo lembo delle antiche Paludi del Tartaro, tra le province di
+  Verona e Mantova. Zona umida di importanza internazionale (Convenzione
+  di Ramsar), 80-81 ettari rialzati rispetto alla campagna circostante
+  per la subsidenza dei terreni bonificati intorno. Nidificano airone
+  rosso, garzetta e nitticora; presente una delle ultime popolazioni
+  italiane di cicuta acquatica.
+specie_principali:
+  - Airone rosso
+  - Garzetta
+  - Nitticora
+  - Tarabuso (svernante)
+  - Alzavola (svernante)
+  - Albanella reale (svernante)
+periodo_migliore:
+  - primavera-estate (nidificazione)
+  - inverno (svernanti)
+prenotazione_necessaria: true
+prezzo_indicativo: "non specificato, da verificare"
+come_arrivare: >
+  Via Valcornara (fondo strada), Gazzo Veronese (VR). Da Verona: SS12
+  direzione Modena fino a Roncanova, poi Gazzo Veronese e San Pietro in
+  Valle; ultimi 6 km su strade perlopiù private.
+contatti:
+  telefono: "327 8908543 (Alessandro, WWF Verona)"
+  email: verona@wwf.it
+  sito_ufficiale: https://www.wwf-verona.it/cosa-facciamo/oasi-e-gestione-aree-verdi/oasi-del-busatello/
+gestore: WWF Veronese, in collaborazione con Comune di Gazzo Veronese
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/palude-del-busatello/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Orari e prezzo non trovati nelle fonti consultate. Contatto alternativo
+  comunale: segreteria@comune.gazzo.vr.it, 0442 579000 (lun-ven 9:30-12:30).

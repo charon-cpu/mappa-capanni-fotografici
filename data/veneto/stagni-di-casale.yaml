@@ -1,0 +1,45 @@
+id: stagni-di-casale
+nome: Oasi WWF Stagni di Casale
+tipo: oasi_riserva
+regione: Veneto
+provincia: Vicenza
+comune: Vicenza
+posizione:
+  precisione: esatta
+  lat: 45.5268230
+  lon: 11.5883357
+  nota_precisione: ""
+descrizione: >
+  Oasi WWF nella zona industriale est di Vicenza, vicino allo svincolo di
+  Torri di Quartesolo. Zona umida di risorgiva con presenza di rana di
+  Lataste, tritone crestato e testuggine palustre europea; tra gli
+  uccelli spiccano schiribilla, garzetta, martin pescatore e tarabuso.
+specie_principali:
+  - Schiribilla
+  - Garzetta
+  - Martin pescatore
+  - Tarabuso
+  - Rana di Lataste
+  - Tritone crestato
+  - Testuggine palustre europea
+periodo_migliore:
+  - marzo-novembre (chiusa a gennaio, febbraio e agosto)
+prenotazione_necessaria: false
+prezzo_indicativo: "non specificato, da verificare"
+come_arrivare: >
+  Via Zamenhof 353, zona industriale est, Vicenza (uscita autostradale
+  Torri di Quartesolo/Vicenza Est), ampio parcheggio gratuito.
+contatti:
+  telefono: "389 5374115"
+  email: stagnicasale@wwf.it
+  sito_ufficiale: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/stagni-di-casale/
+gestore: WWF Vicenza-Padova
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/stagni-di-casale/
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: >
+  Orari dettagliati per fascia mensile disponibili sulla fonte ufficiale,
+  da riportare integralmente nella scheda pubblica quando si costruisce
+  il sito.

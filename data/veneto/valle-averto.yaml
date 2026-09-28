@@ -1,0 +1,49 @@
+id: valle-averto
+nome: Oasi WWF Valle Averto
+tipo: oasi_riserva
+regione: Veneto
+provincia: Venezia
+comune: Campagna Lupia
+posizione:
+  precisione: esatta
+  lat: 45.3644917
+  lon: 12.1395482
+  nota_precisione: ""
+descrizione: >
+  Riserva naturale WWF nella laguna medio-bassa di Venezia, lungo la S.S. 309
+  Romea tra Venezia e Chioggia. Ospita circa 250 specie di uccelli, con
+  popolazioni nidificanti di falco di palude, avocetta, sterna comune,
+  tarabuso, nitticora e averla cenerina; presente anche la testuggine
+  palustre europea. Le visite sono guidate su percorso di 3,5 km.
+specie_principali:
+  - Falco di palude
+  - Avocetta
+  - Sterna comune
+  - Tarabuso
+  - Nitticora
+  - Averla cenerina
+  - Testuggine palustre europea
+periodo_migliore:
+  - primavera
+  - autunno
+  - inverno (svernamento)
+prenotazione_necessaria: true
+prezzo_indicativo: "non specificato sul sito ufficiale, da verificare al momento della prenotazione"
+come_arrivare: >
+  Via Pignara 4, Campagna Lupia (VE), lungo la S.S. 309 Romea al km 112,800,
+  tra Venezia e Chioggia.
+contatti:
+  telefono: "344 0360281"
+  email: oasivalleaverto@wwf.it
+  sito_ufficiale: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/valle-averto/
+gestore: WWF Italia
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/valle-averto/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Prezzo biglietto non trovato sulla pagina ufficiale. Il sito accenna a
+  "orari speciali per fotografi e birdwatcher previo accordo con la
+  direzione" ma senza dettagli: verificare via email prima di pubblicare
+  come possibilità concreta.

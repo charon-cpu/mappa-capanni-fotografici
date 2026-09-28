@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import LuogoCard from '../../components/LuogoCard.astro';
+import { slugify } from '../../utils/slug';
+
+const etichetteTipo: Record<string, string> = {
+  capanno_fotografico: 'Capanni fotografici a pagamento',
+  osservatorio_birdwatching: 'Osservatori per il birdwatching',
+  oasi_riserva: 'Oasi e riserve naturali',
+};
+
+export async function getStaticPaths() {
+  const luoghi = await getCollection('luoghi');
+  const tipi = [...new Set(luoghi.map((l) => l.data.tipo))];
+  return tipi.map((tipo) => ({
+    params: { tipo },
+    props: {
+      tipo,
+      luoghi: luoghi
+        .filter((l) => l.data.tipo === tipo)
+        .map((l) => ({ ...l.data, url: `/${slugify(l.data.regione)}/${l.data.id}` })),
+    },
+  }));
+}
+
+const { tipo, luoghi } = Astro.props;
+const titoloTipo = etichetteTipo[tipo] ?? tipo;
+---
+
+<Base
+  title={`${titoloTipo} in Italia | Mappa dei Capanni Fotografici`}
+  description={`Elenco verificato di ${titoloTipo.toLowerCase()} in Italia, con specie osservabili, periodo migliore e modalità di prenotazione.`}
+>
+  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <h1>{titoloTipo} in Italia</h1>
+  <p>{luoghi.length} luoghi verificati di questo tipo.</p>
+
+  <div class="card-grid">
+    {luoghi.map((l) => (
+      <LuogoCard
+        id={l.id}
+        nome={l.nome}
+        tipo={l.tipo}
+        comune={l.comune}
+        provincia={l.provincia}
+        regione={l.regione}
+        prenotazione_necessaria={l.prenotazione_necessaria}
+        url={l.url}
+      />
+    ))}
+  </div>
+</Base>

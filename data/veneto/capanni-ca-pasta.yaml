@@ -1,0 +1,40 @@
+id: capanni-ca-pasta
+nome: Capanni fotografici di Valle Ca' Pasta
+tipo: capanno_fotografico
+regione: Veneto
+provincia: Rovigo
+comune: Porto Tolle
+posizione:
+  precisione: esatta
+  lat: 44.9591240
+  lon: 12.3342557
+  nota_precisione: >
+    Coordinata sulla località Ca' Venier; da affinare sull'ingresso esatto
+    di Valle Ca' Pasta.
+descrizione: >
+  Capanni fotografici nel Parco Regionale Veneto del Delta del Po, ciascuno
+  dedicato a una specie diversa tra le più rare nidificanti nelle zone
+  umide costiere mediterranee. Accesso su prenotazione stagionale.
+specie_principali: []
+periodo_migliore:
+  - "21 marzo - 21 giugno (finestra di accesso su prenotazione indicata dalla fonte)"
+prenotazione_necessaria: true
+prezzo_indicativo: "non specificato, da verificare"
+come_arrivare: >
+  Valle Ca' Pasta, località Ca' Venier di Porto Tolle (RO).
+contatti:
+  telefono: "347 1096057 / 349 7144962"
+  email: info.sagittaria@libero.it
+  sito_ufficiale: "www.capannidivallecapasta.com (sito non raggiungibile al momento della verifica, DNS non risolve)"
+gestore: "da verificare (probabile cooperativa/associazione locale, nome 'Sagittaria' dall'email di contatto)"
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.parks.it/parco.delta.po.ve/man_dettaglio.php?id=76311
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Dati raccolti da uno snippet di ricerca, non da fetch diretto della
+  pagina (il dettaglio su parks.it non conteneva più l'informazione al
+  momento del controllo, e il sito capannidivallecapasta.com non risolve
+  via DNS). Contattare i numeri indicati per confermare specie, prezzo e
+  periodo esatto prima della pubblicazione.

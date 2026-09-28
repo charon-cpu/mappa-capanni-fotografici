@@ -1,0 +1,49 @@
+id: dune-alberoni
+nome: Oasi WWF Dune degli Alberoni
+tipo: oasi_riserva
+regione: Veneto
+provincia: Venezia
+comune: Venezia
+posizione:
+  precisione: esatta
+  lat: 45.3474861
+  lon: 12.3180788
+  nota_precisione: >
+    Coordinata sul centro dell'abitato di Alberoni: il geocoder non
+    risolve un punto più preciso per l'ingresso dell'oasi in Piazzale
+    Bagni Alberoni. Da affinare con GPS sul campo.
+descrizione: >
+  Oasi WWF di circa 160 ettari all'estremità sud del Lido di Venezia, tra
+  mare Adriatico e laguna, dopo l'abitato medievale di Malamocco. Dune
+  pioniere e dune grigie con prati aridi; il fratino nidifica sulla
+  spiaggia. Tra i rapaci si osservano sparviero, falco pecchiaiolo, falco
+  di palude e nibbio bruno; nelle zone boscate nidificano rigogolo,
+  picchio rosso maggiore, barbagianni e assiolo.
+specie_principali:
+  - Fratino
+  - Sparviero
+  - Falco pecchiaiolo
+  - Falco di palude
+  - Nibbio bruno
+  - Rigogolo
+  - Barbagianni
+periodo_migliore:
+  - primavera-inizio estate
+  - autunno
+prenotazione_necessaria: false
+prezzo_indicativo: "ingresso gratuito"
+come_arrivare: >
+  Piazzale Bagni Alberoni, Lido di Venezia, estremità sud del Lido
+  (circa 9 km dal Lido centro). Vaporetto ACTV linee 1/51/61 fino al
+  Lido, poi autobus linea A fino ad Alberoni; oppure linea 11 da Chioggia.
+contatti:
+  telefono: "348 2686472"
+  email: alberoni@wwf.it
+  sito_ufficiale: https://www.dunealberoni.it/
+gestore: WWF Venezia e Territorio
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.wwf.it/dove-interveniamo/il-nostro-lavoro-in-italia/oasi/dune-degli-alberoni/
+ultima_verifica: 2026-09-28
+stato_affidabilità: verificato
+note_interne: ""

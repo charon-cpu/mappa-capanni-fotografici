@@ -1,0 +1,41 @@
+id: bandiziol-prassaccon
+nome: Boschi di Bandiziol e Prassaccon
+tipo: osservatorio_birdwatching
+regione: Veneto
+provincia: Venezia
+comune: San Stino di Livenza
+posizione:
+  precisione: esatta
+  lat: 45.7539981
+  lon: 12.6966432
+  nota_precisione: ""
+descrizione: >
+  Il più grande complesso boschivo di pianura ricostruito nel Veneto
+  orientale (circa 110 ettari), piantato tra il 1994 e il 1997 su
+  terreni agricoli restituiti a bosco di farnia, carpino bianco e
+  acero campestre. All'interno un osservatorio ornitologico con
+  laghetto e un roccolo storico per la cattura tradizionale degli
+  uccelli (oggi solo struttura dimostrativa), oltre a percorsi
+  ciclo-pedonali e un centro visite.
+specie_principali: []
+periodo_migliore:
+  - da verificare
+prenotazione_necessaria: false
+prezzo_indicativo: "presumibilmente gratuito (parco pubblico), da confermare"
+come_arrivare: >
+  Via Bosco di Bandiziol, San Stino di Livenza (VE), zona nord-orientale
+  del comune.
+contatti:
+  telefono: "0421 394202 (VEGAL)"
+  email: vegal@vegal.net
+  sito_ufficiale: https://www.vegal.net/progetti/centro-naturalistico-ambientale-boschi-bandiziol-e-prassaccon/
+gestore: Comune di San Stino di Livenza / VEGAL
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.vegal.net/progetti/centro-naturalistico-ambientale-boschi-bandiziol-e-prassaccon/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Nessuna delle fonti consultate (comune, VEGAL, FAI) riporta orari,
+  prezzo o elenco specie puntuale: dato il gestore pubblico/misto,
+  contattare direttamente prima della pubblicazione.

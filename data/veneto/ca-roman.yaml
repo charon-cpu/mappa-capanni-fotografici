@@ -1,0 +1,47 @@
+id: ca-roman
+nome: Riserva Naturale LIPU Ca' Roman
+tipo: oasi_riserva
+regione: Veneto
+provincia: Venezia
+comune: Venezia
+posizione:
+  precisione: esatta
+  lat: 45.2723303
+  lon: 12.3008365
+  nota_precisione: >
+    Coordinata al livello dell'abitato di Pellestrina: il geocoder non
+    risolve un punto più preciso per l'ingresso della riserva, che è
+    raggiungibile a piedi lungo il murazzo. Da affinare con GPS sul campo.
+descrizione: >
+  Riserva LIPU all'estremità sud dell'isola di Pellestrina, collegata dal
+  murazzo artificiale. Si trova su una delle rotte migratorie più importanti
+  d'Italia, con almeno 190 specie registrate in transito primaverile e
+  autunnale. Le specie guida sono il fratino e il fraticello.
+specie_principali:
+  - Fratino
+  - Fraticello
+  - Martin pescatore
+  - Falco pellegrino
+  - Sparviero
+  - Succiacapre
+periodo_migliore:
+  - marzo-giugno
+  - settembre-novembre
+prenotazione_necessaria: true
+prezzo_indicativo: "tariffa traghetto ACTV standard, riduzioni per gruppi scolastici; ingresso riserva da verificare"
+come_arrivare: >
+  Traghetto ACTV linea 11 da Chioggia (circa 12 minuti), oppure a piedi
+  lungo il murazzo (circa 1,8 km / 1 ora) dal Lido di Pellestrina.
+contatti:
+  telefono: "340 6192175"
+  email: oasi.caroman@lipu.it
+  sito_ufficiale: https://www.lipu.it/oasi-riserve/riserva-naturale-ca-roman
+gestore: LIPU
+accessibilità: "non specificata, da verificare"
+immagini: []
+fonte: https://www.lipu.it/oasi-riserve/riserva-naturale-ca-roman
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Referente indicato: Luca Mamprin. Prezzo ingresso riserva non trovato,
+  solo tariffe traghetto pubblico. Coordinata da affinare.

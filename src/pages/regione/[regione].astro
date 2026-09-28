@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import LuogoCard from '../../components/LuogoCard.astro';
+import { slugify } from '../../utils/slug';
+
+export async function getStaticPaths() {
+  const luoghi = await getCollection('luoghi');
+  const regioni = [...new Set(luoghi.map((l) => l.data.regione))];
+  return regioni.map((regione) => ({
+    params: { regione: slugify(regione) },
+    props: {
+      regione,
+      luoghi: luoghi
+        .filter((l) => l.data.regione === regione)
+        .map((l) => ({ ...l.data, url: `/${slugify(l.data.regione)}/${l.data.id}` })),
+    },
+  }));
+}
+
+const { regione, luoghi } = Astro.props;
+---
+
+<Base
+  title={`Capanni fotografici e oasi in ${regione} | Mappa dei Capanni Fotografici`}
+  description={`Elenco verificato di capanni fotografici, osservatori per il birdwatching e oasi naturalistiche in ${regione}.`}
+>
+  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <h1>Capanni fotografici e oasi in {regione}</h1>
+  <p>{luoghi.length} luoghi verificati in questa regione.</p>
+
+  <div class="card-grid">
+    {luoghi.map((l) => (
+      <LuogoCard
+        id={l.id}
+        nome={l.nome}
+        tipo={l.tipo}
+        comune={l.comune}
+        provincia={l.provincia}
+        regione={l.regione}
+        prenotazione_necessaria={l.prenotazione_necessaria}
+        url={l.url}
+      />
+    ))}
+  </div>
+</Base>

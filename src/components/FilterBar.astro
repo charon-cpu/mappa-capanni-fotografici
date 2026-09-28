@@ -1,0 +1,52 @@
+---
+interface Props {
+  regioni: string[];
+  specie: string[];
+}
+
+const { regioni, specie } = Astro.props;
+
+const tipi = [
+  { value: 'capanno_fotografico', label: 'Capanno fotografico' },
+  { value: 'osservatorio_birdwatching', label: 'Osservatorio birdwatching' },
+  { value: 'oasi_riserva', label: 'Oasi / riserva' },
+];
+---
+
+<div class="filters">
+  <label>
+    Regione
+    <select id="filtro-regione">
+      <option value="">Tutte</option>
+      {regioni.map((r) => (
+        <option value={r}>{r}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    Tipo
+    <select id="filtro-tipo">
+      <option value="">Tutti</option>
+      {tipi.map((t) => (
+        <option value={t.value}>{t.label}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    Specie
+    <select id="filtro-specie">
+      <option value="">Tutte</option>
+      {specie.map((s) => (
+        <option value={s}>{s}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    Prenotazione
+    <select id="filtro-prenotazione">
+      <option value="">Indifferente</option>
+      <option value="true">Necessaria</option>
+      <option value="false">Non necessaria</option>
+    </select>
+  </label>
+</div>

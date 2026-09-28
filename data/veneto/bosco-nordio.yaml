@@ -1,0 +1,48 @@
+id: bosco-nordio
+nome: Riserva Naturale Integrale Bosco Nordio
+tipo: oasi_riserva
+regione: Veneto
+provincia: Venezia
+comune: Chioggia
+posizione:
+  precisione: esatta
+  lat: 45.1258488
+  lon: 12.2619014
+  nota_precisione: ""
+descrizione: >
+  Riserva naturale statale istituita nel 1971, 113,54 ettari sul più
+  antico sistema dunale della costa veneziana, tra Chioggia e il Po.
+  Formazione forestale rara di carpino-leccio, importante sito di
+  nidificazione per specie forestali oggi rare in pianura. Visitabile
+  solo con guida su prenotazione tramite Veneto Agricoltura.
+specie_principali:
+  - Torcicollo
+  - Sparviero
+  - Assiolo
+  - Poiana
+  - Picchio rosso maggiore
+  - Cinciarella
+  - Cinciallegra
+  - Colombaccio
+  - Ghiandaia
+  - Rigogolo
+periodo_migliore:
+  - primavera (periodo di nidificazione)
+prenotazione_necessaria: true
+prezzo_indicativo: "non specificato, da verificare con Veneto Agricoltura"
+come_arrivare: >
+  Cavanella d'Adige, Chioggia (VE), sull'antico sistema dunale tra Chioggia
+  e la foce del Po.
+contatti:
+  telefono: "da verificare (gestione Veneto Agricoltura)"
+  email: "da verificare"
+  sito_ufficiale: https://www.parks.it/riserva.bosco.nordio/
+gestore: Veneto Agricoltura
+accessibilità: "solo con guida, non idoneo a visite autonome"
+immagini: []
+fonte: https://www.parks.it/riserva.bosco.nordio/par.php
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Contatti diretti di prenotazione non trovati sulla pagina consultata:
+  verificare su bosconordio.venetoagricoltura.org prima della pubblicazione.

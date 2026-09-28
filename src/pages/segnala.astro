@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+
+const oggetto = encodeURIComponent('Segnalazione per Mappa dei Capanni Fotografici');
+const corpo = encodeURIComponent(
+  `Nome del luogo:\nComune/provincia:\nTipo (capanno fotografico / osservatorio birdwatching / oasi-riserva):\nLink al sito ufficiale del gestore:\nCosa vorresti segnalare (nuovo luogo, correzione, luogo chiuso...):\n\n`
+);
+const mailtoHref = `mailto:info@example.it?subject=${oggetto}&body=${corpo}`;
+---
+
+<Base
+  title="Segnala un luogo o una correzione | Mappa dei Capanni Fotografici"
+  description="Segnala un nuovo capanno fotografico, un'oasi o una correzione a una scheda esistente. Ogni segnalazione viene verificata a mano prima della pubblicazione."
+>
+  <p><a href="/">&larr; Torna alla mappa</a></p>
+  <h1>Segnala un luogo o una correzione</h1>
+  <p>
+    Questa mappa è mantenuta a mano: ogni luogo viene verificato sulle fonti
+    ufficiali prima di essere pubblicato. Se conosci un capanno fotografico,
+    un osservatorio o un'oasi che non è ancora in mappa, o se hai notato un
+    dato non più corretto (prezzo, orari, gestore cambiato), scrivici.
+  </p>
+  <p>
+    <strong>Nessuna segnalazione viene pubblicata automaticamente</strong>:
+    verifichiamo sempre la fonte prima di aggiungere o modificare una scheda.
+  </p>
+
+  <p>Per aiutarci a verificare rapidamente, includi nella tua email:</p>
+  <ul>
+    <li>Nome del luogo e comune/provincia</li>
+    <li>Tipo di luogo (capanno fotografico a pagamento, osservatorio per il birdwatching, oasi/riserva)</li>
+    <li>Un link al sito ufficiale del gestore, se esiste</li>
+    <li>Cosa vuoi segnalare: un luogo nuovo, una correzione, o un luogo chiuso</li>
+  </ul>
+
+  <p>
+    <a href={mailtoHref}>Scrivici via email</a>
+  </p>
+
+  <p class="meta">
+    Nota per chi lavora sul progetto: sostituire <code>info@example.it</code>
+    con l'indirizzo email reale prima della pubblicazione.
+  </p>
+</Base>

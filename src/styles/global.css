@@ -1,0 +1,254 @@
+:root {
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-text: #1c231c;
+  --color-text-muted: #545f54;
+  --color-primary: #2f5233;
+  --color-primary-dark: #1f3822;
+  --color-accent: #c96f34;
+  --color-border: #e1ddd3;
+  --radius: 10px;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #141814;
+    --color-surface: #1c231c;
+    --color-text: #eceae3;
+    --color-text-muted: #a8b0a4;
+    --color-primary: #7fb285;
+    --color-primary-dark: #9fcaa3;
+    --color-accent: #e08a4f;
+    --color-border: #2c342c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.site-header .brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 48px;
+  padding: 24px 0 40px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.badge.tipo-capanno_fotografico {
+  background: rgba(201, 111, 52, 0.12);
+  color: var(--color-accent);
+  border-color: rgba(201, 111, 52, 0.35);
+}
+
+.badge.tipo-osservatorio_birdwatching {
+  background: rgba(47, 82, 51, 0.1);
+  color: var(--color-primary-dark);
+  border-color: rgba(47, 82, 51, 0.3);
+}
+
+.badge.tipo-oasi_riserva {
+  background: rgba(47, 82, 51, 0.06);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.luogo-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.luogo-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.luogo-card .meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.pill-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.filters select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+#map {
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  margin: 16px 0;
+}
+
+.scheda-header h1 {
+  margin-bottom: 4px;
+}
+
+.scheda-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .scheda-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.info-table th {
+  text-align: left;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  padding: 8px 8px 8px 0;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: 8px 0;
+  vertical-align: top;
+}
+
+.affidabilita-nota {
+  font-size: 0.82rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  margin: 12px 0;
+}
+
+.affidabilita-nota.da_verificare {
+  border-color: rgba(201, 111, 52, 0.4);
+  background: rgba(201, 111, 52, 0.08);
+}
+
+.affidabilita-nota.verificato {
+  border-color: rgba(47, 82, 51, 0.3);
+  background: rgba(47, 82, 51, 0.06);
+}

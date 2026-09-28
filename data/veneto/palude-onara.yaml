@@ -1,0 +1,46 @@
+id: palude-onara
+nome: Parco Palude di Onara
+tipo: oasi_riserva
+regione: Veneto
+provincia: Padova
+comune: Tombolo
+posizione:
+  precisione: esatta
+  lat: 45.6249877
+  lon: 11.8212721
+  nota_precisione: ""
+descrizione: >
+  Riserva Naturale Regionale di Interesse Locale (istituita nel 1994,
+  SIC/ZPS dal 2000) lungo la linea delle risorgive a sud di Cittadella,
+  vicino al fiume Tergola. Circa 120 ettari, di cui 50 di interesse
+  naturalistico, con percorsi su viottoli e passerelle in legno e
+  pannelli didattici. Ambiente di risorgiva favorevole a specie di
+  bosco umido e canneto.
+specie_principali:
+  - Airone cenerino
+  - Porciglione
+  - Picchio verde
+  - Picchio rosso maggiore
+  - Cannaiola
+  - Gallinella d'acqua
+  - Martin pescatore
+periodo_migliore:
+  - da verificare
+prenotazione_necessaria: false
+prezzo_indicativo: "ingresso gratuito"
+come_arrivare: >
+  Via Asilo 10, Onara di Tombolo (PD), a sud di Cittadella.
+contatti:
+  telefono: "non specificato, da verificare"
+  email: "non specificato, da verificare"
+  sito_ufficiale: https://fondoambiente.it/luoghi/parco-palude-di-onara-8758
+gestore: "da verificare (probabile Comune di Tombolo)"
+accessibilità: "percorsi su passerelle in legno, verificare idoneità per disabilità"
+immagini: []
+fonte: https://fondoambiente.it/luoghi/parco-palude-di-onara-8758
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Contatti diretti del parco non trovati (solo sede centrale FAI a
+  Milano, non pertinente). Verificare gestione comunale prima della
+  pubblicazione.

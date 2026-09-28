@@ -1,0 +1,51 @@
+id: vallevecchia
+nome: Vallevecchia
+tipo: osservatorio_birdwatching
+regione: Veneto
+provincia: Venezia
+comune: Caorle
+posizione:
+  precisione: esatta
+  lat: 45.6244349
+  lon: 12.9572095
+  nota_precisione: >
+    Coordinata sul parcheggio principale di Vallevecchia (Brussa), punto
+    di accesso più comune all'area.
+descrizione: >
+  Tenuta agricola-ambientale di circa 900 ettari tra il mare Adriatico e
+  la laguna di Caorle, gestita dalla Regione Veneto (Azienda
+  Regionale Veneto Agricoltura). Torri di osservazione lungo i confini
+  dell'oasi per avvistare aironi, fenicottero, cormorano, picchio rosso
+  maggiore, cigno reale, oche selvatiche e anatidi. Percorsi natura di
+  circa 15 km, pianeggianti e accessibili. Un museo ("Osservatorio di
+  Vallevecchia") in un ex fienile racconta il territorio.
+specie_principali:
+  - Airone cenerino
+  - Fenicottero
+  - Cormorano
+  - Picchio rosso maggiore
+  - Cigno reale
+periodo_migliore:
+  - primavera
+  - autunno (migrazione)
+prenotazione_necessaria: false
+prezzo_indicativo: "accesso all'area gratuito; museo Osservatorio di Vallevecchia 3 € adulti, 1 € bambini under 10; parcheggio auto 5 €/giorno e camper 10 €/giorno solo giugno-settembre"
+come_arrivare: >
+  Da Portogruaro via Concordia Sagittaria, Lugugnana e Castello di
+  Brussa; oppure autobus ATVO linea 1. Ampio parcheggio gratuito
+  (tariffato solo in estate) presso la spiaggia di Brussa.
+contatti:
+  telefono: "0421 1765659"
+  email: "non specificato, da verificare"
+  sito_ufficiale: https://www.lampo.it/en/activities/vallevecchia-conservation-area/
+gestore: Regione del Veneto — Veneto Agricoltura (Azienda Regionale Pilota e Sperimentale)
+accessibilità: "percorsi pianeggianti, accessibili a tutti"
+immagini: []
+fonte: https://www.lampo.it/en/activities/vallevecchia-conservation-area/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Fonte primaria consultata era un sito turistico terzo (Agenzia Lampo),
+  non il canale ufficiale di Veneto Agricoltura: verificare orari
+  aggiornati del museo e contatti diretti sul sito istituzionale prima
+  della pubblicazione.

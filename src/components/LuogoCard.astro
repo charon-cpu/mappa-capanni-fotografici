@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  nome: string;
+  tipo: string;
+  comune: string;
+  provincia: string;
+  regione: string;
+  prenotazione_necessaria: boolean;
+  url: string;
+}
+
+const { id, nome, tipo, comune, provincia, url, prenotazione_necessaria } = Astro.props;
+
+const etichetteTipo: Record<string, string> = {
+  capanno_fotografico: 'Capanno fotografico',
+  osservatorio_birdwatching: 'Osservatorio birdwatching',
+  oasi_riserva: 'Oasi / riserva',
+};
+---
+
+<article class="luogo-card" id={`card-${id}`}>
+  <span class={`badge tipo-${tipo}`}>{etichetteTipo[tipo] ?? tipo}</span>
+  <h3><a href={url}>{nome}</a></h3>
+  <p class="meta">{comune} ({provincia})</p>
+  <p class="meta">{prenotazione_necessaria ? 'Prenotazione necessaria' : 'Accesso libero'}</p>
+</article>

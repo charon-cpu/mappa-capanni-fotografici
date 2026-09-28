@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  jsonLd?: Record<string, unknown>;
+}
+
+const { title, description, jsonLd } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">Mappa dei Capanni Fotografici</a>
+        <nav>
+          <a href="/regione/veneto">Regioni</a>
+          <a href="/tipo/capanno_fotografico">Tipologie</a>
+          <a href="/segnala">Segnala un luogo</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Dati luoghi verificati manualmente dalle fonti ufficiali indicate in ogni scheda.
+          Mappa e dati cartografici &copy;
+          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">
+            contributori di OpenStreetMap
+          </a>, licenza ODbL.
+        </p>
+        <p>
+          Hai notato un errore o vuoi segnalare un nuovo luogo?
+          <a href="/segnala">Scrivici</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

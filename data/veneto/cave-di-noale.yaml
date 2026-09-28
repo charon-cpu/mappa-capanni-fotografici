@@ -1,0 +1,40 @@
+id: cave-di-noale
+nome: Oasi WWF Cave di Noale
+tipo: oasi_riserva
+regione: Veneto
+provincia: Venezia
+comune: Noale
+posizione:
+  precisione: esatta
+  lat: 45.5549959
+  lon: 12.0758050
+  nota_precisione: ""
+descrizione: >
+  Ex cave di argilla per la fornace di Cavasin, dismesse nei primi anni
+  '70 e trasformate in un sistema di stagni a profondità variabile, oggi
+  Zona Speciale di Conservazione. Circa 20 ettari con percorso natura e
+  punti di osservazione accessibili anche a persone con disabilità.
+specie_principali: []
+periodo_migliore:
+  - da verificare
+prenotazione_necessaria: false
+prezzo_indicativo: "non specificato, da verificare"
+come_arrivare: >
+  Strada degli Ongari, all'incrocio con via Alcide De Pol, Noale (VE).
+  Raggiungibile in auto via SR515/SR245 o a piedi dalla stazione
+  ferroviaria di Noale-Scorzè (circa 7 minuti).
+contatti:
+  telefono: "328 8574049"
+  email: cavedinoale@wwf.it
+  sito_ufficiale: https://www.oasicavedinoale.it/
+gestore: WWF Venezia e Territorio
+accessibilità: "percorso accessibile a persone con disabilità"
+immagini: []
+fonte: https://www.oasicavedinoale.it/contatti/
+ultima_verifica: 2026-09-28
+stato_affidabilità: da_verificare
+note_interne: >
+  Orari stagionali trovati (aprile-settembre mar/gio 14-20, sab/dom 8-20;
+  novembre-febbraio dom 9-16; marzo/ottobre mar/gio 14-18, sab/dom 8-18):
+  da riportare per intero nella scheda pubblica. Elenco specie e prezzo
+  ingresso non trovati, da richiedere via email.
