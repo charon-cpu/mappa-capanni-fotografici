@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
+import FotoLuogo from '../../components/FotoLuogo.astro';
 import { slugify } from '../../utils/slug';
 import { SITE } from '../../config/site';
 
@@ -53,9 +55,16 @@ const jsonLd = {
 
 const title = `${luogo.nome} — ${luogo.comune} (${luogo.provincia}) | ${SITE.name}`;
 const description = luogo.descrizione.slice(0, 155).trim();
+
+let ogImage: string | undefined;
+if (luogo.immagine) {
+  const optimized = await getImage({ src: luogo.immagine.file, width: 1200, height: 630 });
+  ogImage = optimized.src;
+  (jsonLd as Record<string, unknown>).image = new URL(ogImage, Astro.site).toString();
+}
 ---
 
-<Base title={title} description={description} jsonLd={jsonLd}>
+<Base title={title} description={description} jsonLd={jsonLd} ogImage={ogImage}>
   <p><a href="/mappa">&larr; Torna alla mappa</a></p>
 
   <div class="scheda-header">
@@ -74,6 +83,8 @@ const description = luogo.descrizione.slice(0, 155).trim();
       Posizione mostrata in modo approssimato. {luogo.posizione.nota_precisione}
     </div>
   )}
+
+  <FotoLuogo immagine={luogo.immagine} nome={luogo.nome} variant="scheda" />
 
   <div class="scheda-grid">
     <div>

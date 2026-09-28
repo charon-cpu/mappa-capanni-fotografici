@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+interface ImmagineData {
+  file: any;
+  alt: string;
+  autore: string;
+  licenza: string;
+  scattata_sul_posto: boolean;
+}
+
+interface Props {
+  immagine?: ImmagineData;
+  variant?: 'scheda' | 'card';
+  nome: string;
+}
+
+const { immagine, variant = 'scheda', nome } = Astro.props;
+const wrapperClass = variant === 'scheda' ? 'scheda-media' : 'card-media';
+const widths = variant === 'scheda' ? [400, 800, 1200] : [260, 520];
+const sizes = variant === 'scheda' ? '(max-width: 780px) 100vw, 700px' : '260px';
+---
+
+{immagine ? (
+  <figure class={wrapperClass}>
+    <Image
+      src={immagine.file}
+      alt={immagine.alt}
+      widths={widths}
+      sizes={sizes}
+      loading="lazy"
+      decoding="async"
+    />
+    {variant === 'scheda' && (
+      <figcaption class="meta">
+        {immagine.alt} — {immagine.autore}, {immagine.licenza}
+        {!immagine.scattata_sul_posto && ' (foto non scattata in questo luogo: mostra la specie o un ambiente tipico)'}
+      </figcaption>
+    )}
+  </figure>
+) : (
+  <div class={`${wrapperClass} is-placeholder`} role="img" aria-label={`Nessuna foto ancora disponibile per ${nome}`}>
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <rect x="3" y="6" width="18" height="14" rx="2" />
+      <circle cx="12" cy="13" r="3.5" />
+      <path d="M8 6l1.5-2h5L16 6" />
+    </svg>
+    {variant === 'scheda' && <span>Foto non ancora disponibile</span>}
+  </div>
+)}

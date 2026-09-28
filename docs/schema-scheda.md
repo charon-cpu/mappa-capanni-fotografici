@@ -26,7 +26,16 @@ contatti:
   sito_ufficiale: url
 gestore: string
 accessibilità: text           # facoltativo
-immagini: [{url, credit}]     # vuoto per ora, nessuna foto propria di questi luoghi
+immagine:                     # facoltativo: una scheda senza foto è valida, la build
+                               # non si blocca (compare solo un avviso in console)
+  file: ./foto/{id}.jpg       # percorso relativo al file YAML, vedi sotto
+  alt: string                 # testo alternativo descrittivo
+  autore: string               # credito fotografo
+  licenza: string               # es. "© Nome Cognome, tutti i diritti riservati"
+  data_scatto: date            # facoltativo
+  scattata_sul_posto: bool     # false = mostra la specie/l'ambiente ma non è
+                               # stata scattata in quel luogo esatto: la scheda lo
+                               # segnala esplicitamente in didascalia
 fonte: url                    # link al gestore/ente ufficiale usato per verificare i dati
 ultima_verifica: date
 stato_affidabilità: enum      # verificato | da_verificare | segnalato_obsoleto
@@ -42,3 +51,24 @@ segnala esplicitamente nella review.
 
 Nessuno dei luoghi del Veneto (batch di validazione) è in questa categoria: sono
 tutti luoghi con indirizzo pubblicato dal gestore stesso (WWF, LIPU, comune, parco).
+
+## Aggiungere una foto a una scheda (senza toccare il codice)
+
+1. Metti il file immagine (JPEG o PNG, qualunque risoluzione: la build la
+   ottimizza da sola) in `data/{regione}/foto/{id}.jpg`, dove `{id}` è lo
+   stesso slug della scheda. Esempio: la foto di `data/veneto/oasi-cervara.yaml`
+   va in `data/veneto/foto/oasi-cervara.jpg`.
+2. Nel file YAML della scheda aggiungi il blocco `immagine:` come nello
+   schema sopra, con `file: ./foto/oasi-cervara.jpg`.
+3. Usa solo foto tue o con licenza chiara — mai foto prese dal sito del
+   gestore o da altri siti.
+4. Alla build, Astro genera automaticamente le versioni WebP/AVIF in più
+   dimensioni, imposta `width`/`height` per evitare layout shift, e
+   **rimuove i metadati EXIF (inclusa la posizione GPS) dal file
+   pubblicato** — il file originale che hai messo in `data/` resta con i
+   suoi metadati nel repository, solo l'output pubblico ne è privo. Se il
+   luogo ha specie sensibili, non mettere comunque la posizione precisa nel
+   nome del file o nella didascalia.
+5. Una scheda senza `immagine` resta valida: compare un segnaposto al posto
+   della foto, e la build stampa (senza fallire) l'elenco delle schede
+   ancora senza foto.

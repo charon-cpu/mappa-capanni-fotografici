@@ -10,6 +10,15 @@ const numeroLuoghi = tuttiLuoghi.length;
 const regioniPubblicate = [...new Set(tuttiLuoghi.map((l) => l.data.regione))];
 const numeroRegioni = regioniPubblicate.length;
 
+// Avviso di build (non bloccante): schede pubblicate ancora senza foto.
+const senzaFoto = tuttiLuoghi.filter((l) => !l.data.immagine).map((l) => l.data.id);
+if (senzaFoto.length > 0) {
+  console.warn(
+    `\n[foto mancanti] ${senzaFoto.length}/${numeroLuoghi} schede senza immagine: ${senzaFoto.join(', ')}\n` +
+      `Vedi docs/schema-scheda.md, sezione "Aggiungere una foto a una scheda".\n`
+  );
+}
+
 // Tutte le regioni italiane: quelle non ancora pubblicate compaiono come
 // "in arrivo" (mai come già coperte — nessun dato promesso che non abbiamo).
 const tutteLeRegioni = [
