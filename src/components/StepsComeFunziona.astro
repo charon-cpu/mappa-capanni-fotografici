@@ -1,0 +1,49 @@
+---
+const steps = [
+  {
+    numero: 1,
+    titolo: 'Cerca sulla mappa',
+    testo: "Apri la mappa interattiva e guarda cosa c'è vicino a te o nella zona dove vuoi andare.",
+  },
+  {
+    numero: 2,
+    titolo: 'Filtra per specie, stagione, regione',
+    testo: 'Restringi ai luoghi giusti per il soggetto che cerchi, nel periodo migliore per fotografarlo.',
+  },
+  {
+    numero: 3,
+    titolo: 'Controlla fonte e ultima verifica',
+    testo: "Ogni scheda indica da dove vengono i dati e quando sono stati controllati l'ultima volta.",
+  },
+];
+---
+
+<div class="steps" id="steps-come-funziona">
+  {steps.map((s) => (
+    <div class="step">
+      <span class="step-number">{s.numero}</span>
+      <h3>{s.titolo}</h3>
+      <p>{s.testo}</p>
+    </div>
+  ))}
+</div>
+
+<script>
+  const steps = document.querySelectorAll('#steps-come-funziona .step');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.2 }
+    );
+    steps.forEach((s) => obs.observe(s));
+  } else {
+    steps.forEach((s) => s.classList.add('is-visible'));
+  }
+</script>
